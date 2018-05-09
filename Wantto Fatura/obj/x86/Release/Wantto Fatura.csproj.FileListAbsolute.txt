@@ -1,0 +1,32 @@
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.exe.config
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.exe.manifest
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.application
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.exe
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.pdb
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.csprojResolveAssemblyReference.cache
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto_Fatura.Form1.resources
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto_Fatura.Form2.resources
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto_Fatura.Print.resources
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto_Fatura.Properties.Resources.resources
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.csproj.GenerateResource.Cache
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.TrustInfo.xml
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.exe.manifest
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.application
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.exe
+C:\Users\dogan\Desktop\Fatura Programı By Wantto\Wantto Fatura\Wantto Fatura\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.pdb
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.exe.config
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.exe
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.pdb
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.exe.manifest
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.application
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.exe
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\bin\Release\Wantto Fatura.pdb
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.csprojResolveAssemblyReference.cache
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto_Fatura.Form1.resources
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto_Fatura.Form2.resources
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto_Fatura.Print.resources
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto_Fatura.Properties.Resources.resources
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.csproj.GenerateResource.Cache
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.TrustInfo.xml
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.exe.manifest
+C:\Users\dogan\Desktop\Wantto Fatura\Wantto Fatura\obj\x86\Release\Wantto Fatura.application
