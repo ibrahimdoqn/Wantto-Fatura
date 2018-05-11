@@ -143,14 +143,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wantto Fatura.exe" size="311808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wantto Fatura.exe" size="309248">
       <assemblyIdentity name="Wantto Fatura" version="1.1.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>NPDj3IYoNwniWipIFGH37W7psws=</dsig:DigestValue>
+        <dsig:DigestValue>gByqqp9GRK5KKlOEEofFzu32C38=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

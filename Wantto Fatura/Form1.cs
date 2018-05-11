@@ -12,11 +12,15 @@ namespace Wantto_Fatura
 {
     public partial class Form1 : Form
     {
+        //Access Veri Bağalantıları
         OleDbConnection con;
         OleDbDataAdapter da;
         OleDbCommand cmd;
         DataTable dt;
         OleDbDataReader dr;
+        //Hesap toplamı için
+        private double a1 = 0; private double a2 = 0; private double a3 = 0; private double a4 = 0; private double a5 = 0; private double a6 = 0; private double a7 = 0; private double a8 = 0; private double a9 = 0; private double a10 = 0; private double a11 = 0; private double a12 = 0; private double a13 = 0;
+        
         public Form1()
         {
             InitializeComponent();
@@ -199,132 +203,20 @@ namespace Wantto_Fatura
 
             return yazi;
         }
+        
         private void topla()
         {
-            double a1;
-            try
-            {
-                a1 = Convert.ToDouble(T1.Text);
-            }
-            catch
-            {
-                a1 = 0;
-            }
-            double a2;
-            try
-            {
-                a2 = Convert.ToDouble(T2.Text);
-            }
-            catch
-            {
-                a2 = 0;
-            }
-            double a3;
-            try
-            {
-                a3 = Convert.ToDouble(T3.Text);
-            }
-            catch
-            {
-                a3 = 0;
-            }
-            double a4;
-            try
-            {
-                a4 = Convert.ToDouble(T4.Text);
-            }
-            catch
-            {
-                a4 = 0;
-            }
-            double a5;
-            try
-            {
-                a5 = Convert.ToDouble(T5.Text);
-            }
-            catch
-            {
-                a5 = 0;
-            }
-            double a6;
-            try
-            {
-                a6 = Convert.ToDouble(T6.Text);
-            }
-            catch
-            {
-                a6 = 0;
-            }
-            double a7;
-            try
-            {
-                a7 = Convert.ToDouble(T7.Text);
-            }
-            catch
-            {
-                a7 = 0;
-            }
-            double a8;
-            try
-            {
-                a8 = Convert.ToDouble(T8.Text);
-            }
-            catch
-            {
-                a8 = 0;
-            }
-            double a9;
-            try
-            {
-                a9 = Convert.ToDouble(T9.Text);
-            }
-            catch
-            {
-                a9 = 0;
-            }
-            double a10;
-            try
-            {
-                a10 = Convert.ToDouble(T10.Text);
-            }
-            catch
-            {
-                a10 = 0;
-            }
-            double a11;
-            try
-            {
-                a11 = Convert.ToDouble(T11.Text);
-            }
-            catch
-            {
-                a11 = 0;
-            }
-            double a12;
-            try
-            {
-                a12 = Convert.ToDouble(T12.Text);
-            }
-            catch
-            {
-                a12 = 0;
-            }
-            double a13;
-            try
-            {
-                a13 = Convert.ToDouble(T13.Text);
-            }
-            catch
-            {
-                a13 = 0;
-            }
-            double ktoplam = a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13;
-            double kdv1 = Convert.ToDouble(comboKDV1.Text);
-            double kdv2 = ktoplam * kdv1;
-            yazile.Text = yaziyaCevir(Convert.ToDecimal(ktoplam + kdv2));
-            yekun.Text = Convert.ToString(ktoplam) + " TL";
-            kdv.Text = Convert.ToString(kdv2) + " TL";
-            toplam.Text = Convert.ToString(ktoplam + kdv2) + " TL";
+
+            double ktoplam = a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13;//Kutucukların Toplamı
+            double kdv1 = Convert.ToDouble(comboKDV1.Text);//KDV Oranı
+            double kdv2 = ktoplam * kdv1;//Hesaplanmış KDV
+            String Yekun = ktoplam.ToString("F2").Replace('.', ',');//Virgülle ayırmak
+            String kdvHesap = kdv2.ToString("F2").Replace('.', ',');//için hesaplanmış
+            String Toplam = (ktoplam + kdv2).ToString("F2").Replace('.', ',');//String Hesap
+            yazile.Text = yaziyaCevir(Convert.ToDecimal(ktoplam + kdv2));//Yazı ile yazılmış tutar
+            yekun.Text = Yekun + " TL";//YEKUN
+            kdv.Text = kdvHesap + " TL";//KDV
+            toplam.Text = Toplam + " TL";//TOPLAM
         }
         private void saveButton()
         {
@@ -699,9 +591,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M1.Text);
                 Double b = Convert.ToDouble(F1.Text);
-                T1.Text = Convert.ToString(a * b);
+                a1 = a * b;
+                String HesapTutari = (a1).ToString("F2").Replace('.', ',');
+                T1.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch 
+            {
+                a1 = 0;
+                T1.Text = "";
+                
+            }
         }
 
         private void F1_TextChanged(object sender, EventArgs e)
@@ -710,9 +609,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M1.Text);
                 Double b = Convert.ToDouble(F1.Text);
-                T1.Text = Convert.ToString(a * b);
+                a1 = a * b;
+                String HesapTutari = (a1).ToString("F2").Replace('.', ',');
+                T1.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a1 = 0;
+                T1.Text = "";
+                
+            }
         }
 
         private void M2_TextChanged(object sender, EventArgs e)
@@ -721,9 +627,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M2.Text);
                 Double b = Convert.ToDouble(F2.Text);
-                T2.Text = Convert.ToString(a * b);
+                a2 = a * b;
+                String HesapTutari = (a2).ToString("F2").Replace('.', ',');
+                T2.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a2 = 0;
+                T2.Text = "";
+                
+            }
         }
 
         private void F2_TextChanged(object sender, EventArgs e)
@@ -732,9 +645,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M2.Text);
                 Double b = Convert.ToDouble(F2.Text);
-                T2.Text = Convert.ToString(a * b);
+                a2 = a * b;
+                String HesapTutari = (a2).ToString("F2").Replace('.', ',');
+                T2.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a2 = 0;
+                T2.Text = "";
+                
+            }
         }
 
         private void M3_TextChanged(object sender, EventArgs e)
@@ -743,9 +663,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M3.Text);
                 Double b = Convert.ToDouble(F3.Text);
-                T3.Text = Convert.ToString(a * b);
+                a3 = a * b;
+                String HesapTutari = (a3).ToString("F2").Replace('.', ',');
+                T3.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a3 = 0;
+                T3.Text = "";
+                
+            }
         }
 
         private void F3_TextChanged(object sender, EventArgs e)
@@ -754,9 +681,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M3.Text);
                 Double b = Convert.ToDouble(F3.Text);
-                T3.Text = Convert.ToString(a * b);
+                a3 = a * b;
+                String HesapTutari = (a3).ToString("F2").Replace('.', ',');
+                T3.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a3 = 0;
+                T3.Text = "";
+                
+            }
         }
 
         private void M4_TextChanged(object sender, EventArgs e)
@@ -765,9 +699,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M4.Text);
                 Double b = Convert.ToDouble(F4.Text);
-                T4.Text = Convert.ToString(a * b);
+                a4 = a * b;
+                String HesapTutari = (a4).ToString("F2").Replace('.', ',');
+                T4.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a4 = 0;
+                T3.Text = "";
+                
+            }
         }
 
         private void F4_TextChanged(object sender, EventArgs e)
@@ -776,9 +717,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M4.Text);
                 Double b = Convert.ToDouble(F4.Text);
-                T4.Text = Convert.ToString(a * b);
+                a4 = a * b;
+                String HesapTutari = (a4).ToString("F2").Replace('.', ',');
+                T4.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a4 = 0;
+                T4.Text = "";
+                
+            }
         }
 
         private void M5_TextChanged(object sender, EventArgs e)
@@ -787,9 +735,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M5.Text);
                 Double b = Convert.ToDouble(F5.Text);
-                T5.Text = Convert.ToString(a * b);
+                a5 = a * b;
+                String HesapTutari = (a5).ToString("F2").Replace('.', ',');
+                T5.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a5 = 0;
+                T5.Text = "";
+                
+            }
         }
 
         private void F5_TextChanged(object sender, EventArgs e)
@@ -798,9 +753,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M5.Text);
                 Double b = Convert.ToDouble(F5.Text);
-                T5.Text = Convert.ToString(a * b);
+                a5 = a * b;
+                String HesapTutari = (a5).ToString("F2").Replace('.', ',');
+                T5.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a5 = 0;
+                T5.Text = "";
+                
+            }
         }
 
         private void M6_TextChanged(object sender, EventArgs e)
@@ -809,9 +771,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M6.Text);
                 Double b = Convert.ToDouble(F6.Text);
-                T6.Text = Convert.ToString(a * b);
+                a6 = a * b;
+                String HesapTutari = (a6).ToString("F2").Replace('.', ',');
+                T6.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a6 = 0;
+                T6.Text = "";
+                
+            }
         }
 
         private void F6_TextChanged(object sender, EventArgs e)
@@ -820,9 +789,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M6.Text);
                 Double b = Convert.ToDouble(F6.Text);
-                T6.Text = Convert.ToString(a * b);
+                a6 = a * b;
+                String HesapTutari = (a6).ToString("F2").Replace('.', ',');
+                T6.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a6 = 0;
+                T6.Text = "";
+                
+            }
         }
 
         private void M7_TextChanged(object sender, EventArgs e)
@@ -831,9 +807,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M7.Text);
                 Double b = Convert.ToDouble(F7.Text);
-                T7.Text = Convert.ToString(a * b);
+                a7 = a * b;
+                String HesapTutari = (a7).ToString("F2").Replace('.', ',');
+                T7.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a7 = 0;
+                T7.Text = "";
+                
+            }
         }
 
         private void F7_TextChanged(object sender, EventArgs e)
@@ -842,9 +825,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M7.Text);
                 Double b = Convert.ToDouble(F7.Text);
-                T7.Text = Convert.ToString(a * b);
+                a7 = a * b;
+                String HesapTutari = (a7).ToString("F2").Replace('.', ',');
+                T7.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a7 = 0;
+                T7.Text = "";
+                
+            }
         }
 
         private void M8_TextChanged(object sender, EventArgs e)
@@ -853,9 +843,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M8.Text);
                 Double b = Convert.ToDouble(F8.Text);
-                T8.Text = Convert.ToString(a * b);
+                a8 = a * b;
+                String HesapTutari = (a8).ToString("F2").Replace('.', ',');
+                T8.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a8 = 0;
+                T8.Text = "";
+                
+            }
         }
 
         private void F8_TextChanged(object sender, EventArgs e)
@@ -864,9 +861,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M8.Text);
                 Double b = Convert.ToDouble(F8.Text);
-                T8.Text = Convert.ToString(a * b);
+                a8 = a * b;
+                String HesapTutari = (a8).ToString("F2").Replace('.', ',');
+                T8.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a8 = 0;
+                T8.Text = "";
+                
+            }
         }
 
         private void M9_TextChanged(object sender, EventArgs e)
@@ -875,9 +879,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M9.Text);
                 Double b = Convert.ToDouble(F9.Text);
-                T9.Text = Convert.ToString(a * b);
+                a9 = a * b;
+                String HesapTutari = (a9).ToString("F2").Replace('.', ',');
+                T9.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a9 = 0;
+                T9.Text = "";
+                
+            }
         }
 
         private void F9_TextChanged(object sender, EventArgs e)
@@ -886,9 +897,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M9.Text);
                 Double b = Convert.ToDouble(F9.Text);
-                T9.Text = Convert.ToString(a * b);
+                a9 = a * b;
+                String HesapTutari = (a9).ToString("F2").Replace('.', ',');
+                T9.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a9 = 0;
+                T9.Text = "";
+                
+            }
         }
 
         private void M10_TextChanged(object sender, EventArgs e)
@@ -897,9 +915,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M10.Text);
                 Double b = Convert.ToDouble(F10.Text);
-                T10.Text = Convert.ToString(a * b);
+                a10 = a * b;
+                String HesapTutari = (a10).ToString("F2").Replace('.', ',');
+                T10.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a10 = 0;
+                T10.Text = "";
+                
+            }
         }
 
         private void F10_TextChanged(object sender, EventArgs e)
@@ -908,9 +933,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M10.Text);
                 Double b = Convert.ToDouble(F10.Text);
-                T10.Text = Convert.ToString(a * b);
+                a10 = a * b;
+                String HesapTutari = (a10).ToString("F2").Replace('.', ',');
+                T10.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a10 = 0;
+                T10.Text = "";
+                
+            }
         }
 
         private void M11_TextChanged(object sender, EventArgs e)
@@ -919,9 +951,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M11.Text);
                 Double b = Convert.ToDouble(F11.Text);
-                T11.Text = Convert.ToString(a * b);
+                a11 = a * b;
+                String HesapTutari = (a11).ToString("F2").Replace('.', ',');
+                T11.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a11 = 0;
+                T11.Text = "";
+                
+            }
         }
 
         private void F11_TextChanged(object sender, EventArgs e)
@@ -930,9 +969,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M11.Text);
                 Double b = Convert.ToDouble(F11.Text);
-                T11.Text = Convert.ToString(a * b);
+                a11 = a * b;
+                String HesapTutari = (a11).ToString("F2").Replace('.', ',');
+                T11.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a11 = 0;
+                T11.Text = "";
+                
+            }
         }
 
         private void M12_TextChanged(object sender, EventArgs e)
@@ -941,9 +987,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M12.Text);
                 Double b = Convert.ToDouble(F12.Text);
-                T12.Text = Convert.ToString(a * b);
+                a12 = a * b;
+                String HesapTutari = (a12).ToString("F2").Replace('.', ',');
+                T12.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a12 = 0;
+                T12.Text = "";
+                
+            }
         }
 
         private void F12_TextChanged(object sender, EventArgs e)
@@ -952,9 +1005,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M12.Text);
                 Double b = Convert.ToDouble(F12.Text);
-                T12.Text = Convert.ToString(a * b);
+                a12 = a * b;
+                String HesapTutari = (a12).ToString("F2").Replace('.', ',');
+                T12.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a12 = 0;
+                T12.Text = "";
+                
+            }
         }
 
         private void M13_TextChanged(object sender, EventArgs e)
@@ -963,9 +1023,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M13.Text);
                 Double b = Convert.ToDouble(F13.Text);
-                T13.Text = Convert.ToString(a * b);
+                a13 = a * b;
+                String HesapTutari = (a13).ToString("F2").Replace('.', ',');
+                T13.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a13 = 0;
+                T13.Text = "";
+                
+            }
         }
 
         private void F13_TextChanged(object sender, EventArgs e)
@@ -974,9 +1041,16 @@ namespace Wantto_Fatura
             {
                 Double a = Convert.ToDouble(M13.Text);
                 Double b = Convert.ToDouble(F13.Text);
-                T13.Text = Convert.ToString(a * b);
+                a13 = a * b;
+                String HesapTutari = (a13).ToString("F2").Replace('.', ',');
+                T13.Text = HesapTutari + " TL";
             }
-            catch { }
+            catch
+            {
+                a13 = 0;
+                T13.Text = "";
+                
+            }
         }
 
         private void T1_TextChanged(object sender, EventArgs e)

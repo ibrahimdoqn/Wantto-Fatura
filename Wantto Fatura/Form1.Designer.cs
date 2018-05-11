@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -172,7 +173,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(527, 668);
+            this.tabControl1.Size = new System.Drawing.Size(560, 668);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -277,7 +278,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(519, 639);
+            this.tabPage1.Size = new System.Drawing.Size(552, 639);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ana Sayfa";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -287,7 +288,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(388, 4);
+            this.label16.Location = new System.Drawing.Point(379, 4);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 13);
             this.label16.TabIndex = 151;
@@ -308,9 +309,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(433, 72);
+            this.button4.Location = new System.Drawing.Point(433, 69);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(96, 23);
             this.button4.TabIndex = 75;
             this.button4.Text = "Temizle";
             this.button4.UseVisualStyleBackColor = true;
@@ -320,7 +321,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(433, 46);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(96, 20);
             this.button3.TabIndex = 74;
             this.button3.Text = "Yazdır";
             this.button3.UseVisualStyleBackColor = true;
@@ -330,7 +331,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(433, 20);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(96, 23);
             this.button2.TabIndex = 73;
             this.button2.Text = "Kayıt";
             this.button2.UseVisualStyleBackColor = true;
@@ -338,7 +339,7 @@
             // 
             // f_no
             // 
-            this.f_no.Location = new System.Drawing.Point(113, 114);
+            this.f_no.Location = new System.Drawing.Point(113, 113);
             this.f_no.Name = "f_no";
             this.f_no.Size = new System.Drawing.Size(100, 20);
             this.f_no.TabIndex = 5;
@@ -359,7 +360,7 @@
             this.yazile.Enabled = false;
             this.yazile.Location = new System.Drawing.Point(50, 577);
             this.yazile.Name = "yazile";
-            this.yazile.Size = new System.Drawing.Size(458, 20);
+            this.yazile.Size = new System.Drawing.Size(479, 20);
             this.yazile.TabIndex = 144;
             this.yazile.Text = "SIFIR Kr.";
             // 
@@ -388,20 +389,20 @@
             // toplam
             // 
             this.toplam.Enabled = false;
-            this.toplam.Location = new System.Drawing.Point(422, 551);
+            this.toplam.Location = new System.Drawing.Point(427, 551);
             this.toplam.Name = "toplam";
-            this.toplam.Size = new System.Drawing.Size(86, 20);
+            this.toplam.Size = new System.Drawing.Size(102, 20);
             this.toplam.TabIndex = 141;
-            this.toplam.Text = "0 TL";
+            this.toplam.Text = "0,00 TL";
             // 
             // kdv
             // 
             this.kdv.Enabled = false;
-            this.kdv.Location = new System.Drawing.Point(422, 525);
+            this.kdv.Location = new System.Drawing.Point(427, 525);
             this.kdv.Name = "kdv";
-            this.kdv.Size = new System.Drawing.Size(86, 20);
+            this.kdv.Size = new System.Drawing.Size(102, 20);
             this.kdv.TabIndex = 140;
-            this.kdv.Text = "0 TL";
+            this.kdv.Text = "0,00 TL";
             // 
             // label11
             // 
@@ -417,11 +418,11 @@
             // yekun
             // 
             this.yekun.Enabled = false;
-            this.yekun.Location = new System.Drawing.Point(422, 499);
+            this.yekun.Location = new System.Drawing.Point(427, 499);
             this.yekun.Name = "yekun";
-            this.yekun.Size = new System.Drawing.Size(86, 20);
+            this.yekun.Size = new System.Drawing.Size(102, 20);
             this.yekun.TabIndex = 138;
-            this.yekun.Text = "0 TL";
+            this.yekun.Text = "0,00 TL";
             // 
             // label10
             // 
@@ -446,7 +447,7 @@
             this.T13.Enabled = false;
             this.T13.Location = new System.Drawing.Point(451, 473);
             this.T13.Name = "T13";
-            this.T13.Size = new System.Drawing.Size(57, 20);
+            this.T13.Size = new System.Drawing.Size(78, 20);
             this.T13.TabIndex = 72;
             this.T13.TextChanged += new System.EventHandler(this.T13_TextChanged);
             // 
@@ -487,7 +488,7 @@
             this.T12.Enabled = false;
             this.T12.Location = new System.Drawing.Point(451, 447);
             this.T12.Name = "T12";
-            this.T12.Size = new System.Drawing.Size(57, 20);
+            this.T12.Size = new System.Drawing.Size(78, 20);
             this.T12.TabIndex = 67;
             this.T12.TextChanged += new System.EventHandler(this.T12_TextChanged);
             // 
@@ -528,7 +529,7 @@
             this.T11.Enabled = false;
             this.T11.Location = new System.Drawing.Point(451, 421);
             this.T11.Name = "T11";
-            this.T11.Size = new System.Drawing.Size(57, 20);
+            this.T11.Size = new System.Drawing.Size(78, 20);
             this.T11.TabIndex = 62;
             this.T11.TextChanged += new System.EventHandler(this.T11_TextChanged);
             // 
@@ -569,7 +570,7 @@
             this.T10.Enabled = false;
             this.T10.Location = new System.Drawing.Point(451, 395);
             this.T10.Name = "T10";
-            this.T10.Size = new System.Drawing.Size(57, 20);
+            this.T10.Size = new System.Drawing.Size(78, 20);
             this.T10.TabIndex = 57;
             this.T10.TextChanged += new System.EventHandler(this.T10_TextChanged);
             // 
@@ -610,7 +611,7 @@
             this.T9.Enabled = false;
             this.T9.Location = new System.Drawing.Point(451, 369);
             this.T9.Name = "T9";
-            this.T9.Size = new System.Drawing.Size(57, 20);
+            this.T9.Size = new System.Drawing.Size(78, 20);
             this.T9.TabIndex = 52;
             this.T9.TextChanged += new System.EventHandler(this.T9_TextChanged);
             // 
@@ -651,7 +652,7 @@
             this.T8.Enabled = false;
             this.T8.Location = new System.Drawing.Point(451, 343);
             this.T8.Name = "T8";
-            this.T8.Size = new System.Drawing.Size(57, 20);
+            this.T8.Size = new System.Drawing.Size(78, 20);
             this.T8.TabIndex = 47;
             this.T8.TextChanged += new System.EventHandler(this.T8_TextChanged);
             // 
@@ -692,7 +693,7 @@
             this.T7.Enabled = false;
             this.T7.Location = new System.Drawing.Point(451, 317);
             this.T7.Name = "T7";
-            this.T7.Size = new System.Drawing.Size(57, 20);
+            this.T7.Size = new System.Drawing.Size(78, 20);
             this.T7.TabIndex = 42;
             this.T7.TextChanged += new System.EventHandler(this.T7_TextChanged);
             // 
@@ -733,7 +734,7 @@
             this.T6.Enabled = false;
             this.T6.Location = new System.Drawing.Point(451, 291);
             this.T6.Name = "T6";
-            this.T6.Size = new System.Drawing.Size(57, 20);
+            this.T6.Size = new System.Drawing.Size(78, 20);
             this.T6.TabIndex = 37;
             this.T6.TextChanged += new System.EventHandler(this.T6_TextChanged);
             // 
@@ -774,7 +775,7 @@
             this.T5.Enabled = false;
             this.T5.Location = new System.Drawing.Point(451, 265);
             this.T5.Name = "T5";
-            this.T5.Size = new System.Drawing.Size(57, 20);
+            this.T5.Size = new System.Drawing.Size(78, 20);
             this.T5.TabIndex = 32;
             this.T5.TextChanged += new System.EventHandler(this.T5_TextChanged);
             // 
@@ -815,7 +816,7 @@
             this.T4.Enabled = false;
             this.T4.Location = new System.Drawing.Point(451, 239);
             this.T4.Name = "T4";
-            this.T4.Size = new System.Drawing.Size(57, 20);
+            this.T4.Size = new System.Drawing.Size(78, 20);
             this.T4.TabIndex = 27;
             this.T4.TextChanged += new System.EventHandler(this.T4_TextChanged);
             // 
@@ -856,7 +857,7 @@
             this.T3.Enabled = false;
             this.T3.Location = new System.Drawing.Point(451, 213);
             this.T3.Name = "T3";
-            this.T3.Size = new System.Drawing.Size(57, 20);
+            this.T3.Size = new System.Drawing.Size(78, 20);
             this.T3.TabIndex = 22;
             this.T3.TextChanged += new System.EventHandler(this.T3_TextChanged);
             // 
@@ -897,7 +898,7 @@
             this.T2.Enabled = false;
             this.T2.Location = new System.Drawing.Point(451, 187);
             this.T2.Name = "T2";
-            this.T2.Size = new System.Drawing.Size(57, 20);
+            this.T2.Size = new System.Drawing.Size(78, 20);
             this.T2.TabIndex = 17;
             this.T2.TextChanged += new System.EventHandler(this.T2_TextChanged);
             // 
@@ -938,7 +939,7 @@
             this.T1.Enabled = false;
             this.T1.Location = new System.Drawing.Point(451, 161);
             this.T1.Name = "T1";
-            this.T1.Size = new System.Drawing.Size(57, 20);
+            this.T1.Size = new System.Drawing.Size(78, 20);
             this.T1.TabIndex = 12;
             this.T1.TextChanged += new System.EventHandler(this.T1_TextChanged);
             // 
@@ -963,7 +964,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(448, 145);
+            this.label9.Location = new System.Drawing.Point(461, 145);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 34;
@@ -1025,7 +1026,7 @@
             "0,18",
             "0,08",
             "0"});
-            this.comboKDV1.Location = new System.Drawing.Point(451, 113);
+            this.comboKDV1.Location = new System.Drawing.Point(462, 112);
             this.comboKDV1.Name = "comboKDV1";
             this.comboKDV1.Size = new System.Drawing.Size(46, 21);
             this.comboKDV1.TabIndex = 76;
@@ -1037,7 +1038,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(439, 95);
+            this.label5.Location = new System.Drawing.Point(450, 94);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 9;
@@ -1130,7 +1131,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(519, 639);
+            this.tabPage2.Size = new System.Drawing.Size(552, 639);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Firmalar";
             // 
@@ -1170,7 +1171,7 @@
             this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(519, 639);
+            this.tabPage3.Size = new System.Drawing.Size(552, 639);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Faturalar";
             // 
@@ -1234,6 +1235,12 @@
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
@@ -1250,7 +1257,7 @@
             this.hakkındaToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(527, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(560, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1332,12 +1339,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(527, 692);
+            this.ClientSize = new System.Drawing.Size(560, 692);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wantto Fatura";
