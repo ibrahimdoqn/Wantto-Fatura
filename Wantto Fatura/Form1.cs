@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Drawing.Printing;
 
 namespace Wantto_Fatura
 {
@@ -18,31 +19,368 @@ namespace Wantto_Fatura
         OleDbCommand cmd;
         DataTable dt;
         OleDbDataReader dr;
+        string serial = "";
         //Hesap toplamı için
         private double a1 = 0; private double a2 = 0; private double a3 = 0; private double a4 = 0; private double a5 = 0; private double a6 = 0; private double a7 = 0; private double a8 = 0; private double a9 = 0; private double a10 = 0; private double a11 = 0; private double a12 = 0; private double a13 = 0;
-        
+        //Print
+        PrintDocument pDoc;
+
         public Form1()
         {
             InitializeComponent();
-            tarih.Text = DateTime.Now.ToShortDateString();
+            pDoc = new PrintDocument();
+
+            // Print event'i yaratiliyor.
+            pDoc.PrintPage += new PrintPageEventHandler(pDoc_PrintPage);
         }
+
+        // Print Fonksionu
+        void pDoc_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            //Fatura ayarları
+            float SatirAralik = 10f;
+            //Üstten
+            float sayinBaslangic = 10f;
+            float detayBaslangic = 80f;
+            float vdBaslangic = 40f;
+            float tarihBaslangic = 30f;
+            float yekunBaslangıc = 200f;
+            float kdvBaslangıc = 210f;
+            float toplamBaslangic = 220f;
+            float yazileBaslangic = 220f;
+            //Yandan
+            float cBaslangic = 10f;
+            float mBaslangic = 50f;
+            float bBaslangic = 75f;
+            float fBaslangic = 90f;
+            float tBaslangic = 110f;
+            float sayinYandan = 10f;
+            float vd1Yandan = 10f;
+            float vd2Yandan = 40f;
+            float tarihYandan = 90f;
+            float yekunYandan = 150;
+            float kdvYandan = 150;
+            float toplamYandan = 150f;
+            float yazileYandan = 50f;
+            float tarihBosluk1 = 10f;
+            float tarihBosluk2 = 20f;
+
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT *FROM Form";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                SatirAralik = float.Parse(dr[1].ToString());
+                sayinBaslangic = float.Parse(dr[2].ToString());
+                detayBaslangic = float.Parse(dr[3].ToString());
+                vdBaslangic = float.Parse(dr[4].ToString());
+                tarihBaslangic = float.Parse(dr[5].ToString());
+                yekunBaslangıc = float.Parse(dr[6].ToString());
+                kdvBaslangıc = float.Parse(dr[7].ToString());
+                toplamBaslangic = float.Parse(dr[8].ToString());
+                yazileBaslangic = float.Parse(dr[9].ToString());
+                cBaslangic = float.Parse(dr[10].ToString());
+                mBaslangic = float.Parse(dr[11].ToString());
+                bBaslangic = float.Parse(dr[12].ToString());
+                fBaslangic = float.Parse(dr[13].ToString());
+                tBaslangic = float.Parse(dr[14].ToString());
+                sayinYandan = float.Parse(dr[15].ToString());
+                vd1Yandan = float.Parse(dr[16].ToString());
+                vd2Yandan = float.Parse(dr[17].ToString());
+                tarihYandan = float.Parse(dr[18].ToString());
+                yekunYandan = float.Parse(dr[19].ToString());
+                kdvYandan = float.Parse(dr[20].ToString());
+                toplamYandan = float.Parse(dr[21].ToString());
+                yazileYandan = float.Parse(dr[22].ToString());
+                tarihBosluk1 = float.Parse(dr[23].ToString());
+                tarihBosluk2 = float.Parse(dr[24].ToString());
+            }
+                dr.Close();
+            float aralik(float baslangic, float Satir)
+            {
+                return baslangic + (Satir * SatirAralik);
+            }
+
+            // Bundan sonra X, Y, Genislik, Yukseklik gibi olculerde
+            // Pixel degil Milimetre kullanicahiz
+            e.Graphics.PageUnit = GraphicsUnit.Millimeter;
+
+            // Bu sekilde sabit bir printer'a yonlendire biliriz
+            // e.PageSettings.PrinterSettings.PrinterName = "Bir Printer Adi";
+
+            // yazdirmada kullanilacak bir font olusturalim.
+            Font aFont = new System.Drawing.Font("Arial", 10);
+
+            // stringi pDoc nesnemize yazdiralim.
+            // string olarak "Deneme" verdik.
+            // renk olarak brushes.black verdik ve X,Y olarak noktalarimizi belirttik.
+            // ben genelde point kullanmaktan yana degilimdir gerci
+            // bu yuzden tanimlamayi pointsiz yapalim.
+
+
+
+            //Sayın Kısmı
+            e.Graphics.DrawString(textBox1.Text, aFont, Brushes.Black, sayinYandan, aralik(sayinBaslangic, 0f));
+            e.Graphics.DrawString(textBox2.Text, aFont, Brushes.Black, sayinYandan, aralik(sayinBaslangic, 1f));
+            e.Graphics.DrawString(textBox3.Text, aFont, Brushes.Black, sayinYandan, aralik(sayinBaslangic, 2f));
+            //Vergi Dairesi Vergi No
+            e.Graphics.DrawString(vd1.Text, aFont, Brushes.Black, vd1Yandan, vdBaslangic);
+            e.Graphics.DrawString(vd2.Text, aFont, Brushes.Black, vd2Yandan, vdBaslangic);
+            //Tarih
+            //e.Graphics.DrawString(dateTimePicker3.Value.ToShortDateString(), aFont, Brushes.Black, tarihYandan, tarihBaslangic);
+            string fYear = dateTimePicker3.Value.Year.ToString();
+            string fMonth = dateTimePicker3.Value.Month.ToString();
+            string fDay = dateTimePicker3.Value.Month.ToString();
+            string fYear2 = fYear[2].ToString() + fYear[3].ToString();
+            e.Graphics.DrawString(fDay, aFont, Brushes.Black, tarihYandan, tarihBaslangic);
+            e.Graphics.DrawString(fMonth, aFont, Brushes.Black, tarihYandan + tarihBosluk1, tarihBaslangic);
+            e.Graphics.DrawString(fYear2, aFont, Brushes.Black, tarihYandan + tarihBosluk1 + tarihBosluk2, tarihBaslangic);
+            //Fatura Detayları
+
+            if (C1.Text != "")
+            {
+                e.Graphics.DrawString(C1.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic,0f));
+                e.Graphics.DrawString(M1.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 0f));
+                e.Graphics.DrawString(B1.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 0f));
+                e.Graphics.DrawString(F1.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 0f));
+                e.Graphics.DrawString(T1.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 0f));
+            }
+            if (C2.Text != "")
+            {
+                e.Graphics.DrawString(C2.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 1f));
+                e.Graphics.DrawString(M2.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 1f));
+                e.Graphics.DrawString(B2.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 1f));
+                e.Graphics.DrawString(F2.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 1f));
+                e.Graphics.DrawString(T2.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 1f));
+            }
+            if (C3.Text != "")
+            {
+                e.Graphics.DrawString(C3.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 2f));
+                e.Graphics.DrawString(M3.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 2f));
+                e.Graphics.DrawString(B3.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 2f));
+                e.Graphics.DrawString(F3.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 2f));
+                e.Graphics.DrawString(T3.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 2f));
+            }
+            if (C4.Text != "")
+            {
+                e.Graphics.DrawString(C4.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 3f));
+                e.Graphics.DrawString(M4.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 3f));
+                e.Graphics.DrawString(B4.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 3f));
+                e.Graphics.DrawString(F4.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 3f));
+                e.Graphics.DrawString(T4.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 3f));
+            }
+            if (C5.Text != "")
+            {
+                e.Graphics.DrawString(C5.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 4f));
+                e.Graphics.DrawString(M5.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 4f));
+                e.Graphics.DrawString(B5.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 4f));
+                e.Graphics.DrawString(F5.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 4f));
+                e.Graphics.DrawString(T5.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 4f));
+            }
+            if (C6.Text != "")
+            {
+                e.Graphics.DrawString(C6.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 5f));
+                e.Graphics.DrawString(M6.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 5f));
+                e.Graphics.DrawString(B6.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 5f));
+                e.Graphics.DrawString(F6.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 5f));
+                e.Graphics.DrawString(T6.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 5f));
+            }
+            if (C7.Text != "")
+            {
+                e.Graphics.DrawString(C7.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 6f));
+                e.Graphics.DrawString(M7.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 6f));
+                e.Graphics.DrawString(B7.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 6f));
+                e.Graphics.DrawString(F7.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 6f));
+                e.Graphics.DrawString(T7.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 6f));
+            }
+            if (C8.Text != "")
+            {
+                e.Graphics.DrawString(C8.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 7f));
+                e.Graphics.DrawString(M8.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 7f));
+                e.Graphics.DrawString(B8.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 7f));
+                e.Graphics.DrawString(F8.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 7f));
+                e.Graphics.DrawString(T8.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 7f));
+            }
+            if (C9.Text != "")
+            {
+                e.Graphics.DrawString(C9.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 8f));
+                e.Graphics.DrawString(M9.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 8f));
+                e.Graphics.DrawString(B9.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 8f));
+                e.Graphics.DrawString(F9.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 8f));
+                e.Graphics.DrawString(T9.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 8f));
+            }
+            if (C10.Text != "")
+            {
+                e.Graphics.DrawString(C10.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 9f));
+                e.Graphics.DrawString(M10.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 9f));
+                e.Graphics.DrawString(B10.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 9f));
+                e.Graphics.DrawString(F10.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 9f));
+                e.Graphics.DrawString(T10.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 9f));
+            }
+            if (C11.Text != "")
+            {
+                e.Graphics.DrawString(C11.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 10f));
+                e.Graphics.DrawString(M11.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 10f));
+                e.Graphics.DrawString(B11.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 10f));
+                e.Graphics.DrawString(F11.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 10f));
+                e.Graphics.DrawString(T11.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 10f));
+            }
+            if (C12.Text != "")
+            {
+                e.Graphics.DrawString(C12.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 11f));
+                e.Graphics.DrawString(M12.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 11f));
+                e.Graphics.DrawString(B12.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 11f));
+                e.Graphics.DrawString(F12.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 11f));
+                e.Graphics.DrawString(T12.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 11f));
+            }
+            if (C13.Text != "")
+            {
+                e.Graphics.DrawString(C13.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 12f));
+                e.Graphics.DrawString(M13.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 12f));
+                e.Graphics.DrawString(B13.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 12f));
+                e.Graphics.DrawString(F13.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 12f));
+                e.Graphics.DrawString(T13.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 12f));
+            }
+            //Yekun KDV Toplam
+            e.Graphics.DrawString(yekun.Text + " TL", aFont, Brushes.Black, yekunYandan, yekunBaslangıc);
+            e.Graphics.DrawString(kdv.Text + " TL", aFont, Brushes.Black, kdvYandan, kdvBaslangıc);
+            e.Graphics.DrawString(toplam.Text + " TL", aFont, Brushes.Black, toplamYandan, toplamBaslangic);
+            //Yalnız
+            e.Graphics.DrawString(yazile.Text, aFont, Brushes.Black, yazileYandan, yazileBaslangic);
+        }
+
+        private void fyazdir()
+        {
+            // suan bir printer belirtmedigimiz icin default printer'a atacaktir.
+            // printer tanitmak icin usteki fonksionda islem yapilmalidir veyahut
+            // print dialog nesnesi kullanilmalidir.
+            // ikidinide size gostermek istiyorum.
+            // pDoc.Print();
+
+            // Print Dialog olusturdugumuz zaman
+            PrintDialog apDialog = new PrintDialog();
+
+            // Hangi dokumana bagli oldugunu seceriz.
+            apDialog.Document = pDoc;
+            pDoc.Print();
+        }
+
         public void dataReader() 
         {
             dataReader2();
             dataReader1();
         }
+
         public void dataReader1() 
         {
-            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
-            cmd = new OleDbCommand("Select *From Fatura", con);
-            da = new OleDbDataAdapter(cmd);
+            string vFDate, vTDate, vStr, vStr1, vStr2, vStr3;
+            vFDate = dateTimePicker1.Value.ToShortDateString();
+            vTDate = dateTimePicker2.Value.ToShortDateString();
+            if (checkBox1.Checked == true && checkBox2.Checked)
+            {
+                vStr = "Select Fatura_No, Tarih, Musteri, Toplam, Odendi From Fatura where Date1 between tr1 and tr2";
+                vStr1 = "SELECT sum(kdv) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD";
+                vStr2 = "SELECT sum(Yekun) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD";
+                vStr3 = "SELECT sum(Toplam) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD";
+            }
+            else if (checkBox1.Checked == true)
+            {
+                vStr = "Select Fatura_No, Tarih, Musteri, Toplam, Odendi From Fatura where Date1 between tr1 and tr2 AND odendi ='Evet'";
+                vStr1 = "SELECT sum(kdv) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi ='Evet'";
+                vStr2 = "SELECT sum(Yekun) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi ='Evet'";
+                vStr3 = "SELECT sum(Toplam) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi ='Evet'";
+            }
+            else if (checkBox2.Checked == true)
+            {
+                vStr = "Select Fatura_No, Tarih, Musteri, Toplam, Odendi From Fatura where Date1 between tr1 and tr2 AND odendi ='Hayır'";
+                vStr1 = "SELECT sum(kdv) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi ='Hayır'";
+                vStr2 = "SELECT sum(Yekun) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi ='Hayır'";
+                vStr3 = "SELECT sum(Toplam) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi ='Hayır'";
+            }
+            else
+            {
+                vStr = "Select Fatura_No, Tarih, Musteri, Toplam, Odendi From Fatura where Date1 between tr1 and tr2 AND odendi =''";
+                vStr1 = "SELECT sum(kdv) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi =''";
+                vStr2 = "SELECT sum(Yekun) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi =''";
+                vStr3 = "SELECT sum(Toplam) FROM Fatura WHERE Date1 BETWEEN @FD AND @TD AND odendi =''";
+            }
+
+            if(comboBox1.Text != "")
+            {
+                vStr = vStr + " AND Musteri='" + comboBox1.Text + "'";
+                vStr1 = vStr1 + " AND Musteri='" + comboBox1.Text + "'";
+                vStr2 = vStr2 + " AND Musteri='" + comboBox1.Text + "'";
+                vStr3 = vStr3 + " AND Musteri='" + comboBox1.Text + "'";
+            }
+
+            if (textBox4.Text != "")
+            {
+                vStr = vStr + " AND Fatura_No like '" + textBox4.Text + "%'";
+                vStr1 = vStr1 + " AND Fatura_No like '" + textBox4.Text + "%'";
+                vStr2 = vStr2 + " AND Fatura_No like '" + textBox4.Text + "%'";
+                vStr3 = vStr3 + " AND Fatura_No like '" + textBox4.Text + "%'";
+            }
+
+            //Datagrid'i doldurur
+            da = new OleDbDataAdapter(vStr, con);
+            da.SelectCommand.Parameters.AddWithValue("tr1", vFDate);
+            da.SelectCommand.Parameters.AddWithValue("tr2", vTDate);
             dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+
+            //Toplam KDV'yi hesaplar
+            cmd = new OleDbCommand(vStr1, con);
+            cmd.Parameters.AddWithValue("@FD", vFDate);
+            cmd.Parameters.AddWithValue("@TD", vTDate);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                label17.Text = "Toplam KDV: " + dr[0].ToString() + " TL";
+            }
+            dr.Close();
+
+            //Aratoplamı Verir
+            cmd = new OleDbCommand(vStr2, con);
+            cmd.Parameters.AddWithValue("@FD", vFDate);
+            cmd.Parameters.AddWithValue("@TD", vTDate);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                label19.Text = "Aratoplam: " + dr[0].ToString() + " TL";
+            }
+            dr.Close();
+
+            //Toplam Raporunu verir
+            cmd = new OleDbCommand(vStr3, con);
+            cmd.Parameters.AddWithValue("@FD", vFDate);
+            cmd.Parameters.AddWithValue("@TD", vTDate);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                label20.Text = "Toplam: " + dr[0].ToString() + " TL";
+            }
+            dr.Close();
+
         }
+
+        private void musteri()
+        {
+            //Musteri Combobox Kısmı
+            comboBox1.Items.Clear();
+            comboBox1.Items.Add("");
+            cmd = new OleDbCommand("select distinct Musteri from Fatura", con);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                comboBox1.Items.Add(dr["Musteri"]);
+            }
+            dr.Close();
+        }
+
         public void dataReader2()
         {
-            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
             cmd = new OleDbCommand("Select *From person", con);
             da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
@@ -54,7 +392,6 @@ namespace Wantto_Fatura
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-            tarih.Clear();
             vd1.Clear();
             vd2.Clear();
             f_no.Clear();
@@ -138,12 +475,7 @@ namespace Wantto_Fatura
             T13.Clear();
             //
         }
-        private void updateTablo()
-        {
-            OleDbCommandBuilder oldbcom = new OleDbCommandBuilder(da);
-            oldbcom.GetUpdateCommand();
-            da.Update(dt); 
-        }
+
         private string yaziyaCevir(decimal tutar)
         {
             string sTutar = tutar.ToString("F2").Replace('.', ','); // Replace('.',',') ondalık ayracının . olma durumu için            
@@ -214,32 +546,31 @@ namespace Wantto_Fatura
             String kdvHesap = kdv2.ToString("F2").Replace('.', ',');//için hesaplanmış
             String Toplam = (ktoplam + kdv2).ToString("F2").Replace('.', ',');//String Hesap
             yazile.Text = yaziyaCevir(Convert.ToDecimal(ktoplam + kdv2));//Yazı ile yazılmış tutar
-            yekun.Text = Yekun + " TL";//YEKUN
-            kdv.Text = kdvHesap + " TL";//KDV
-            toplam.Text = Toplam + " TL";//TOPLAM
+            yekun.Text = Yekun;//YEKUN
+            kdv.Text = kdvHesap;//KDV
+            toplam.Text = Toplam;//TOPLAM
         }
         private void saveButton()
         {
             if (f_no.Text != "")
             {
                 string ad = f_no.Text;
-                string sifre = tarih.Text;
-                con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
+                string sifre = dateTimePicker3.Value.ToShortDateString();
                 cmd = new OleDbCommand();
-                con.Open();
                 cmd.Connection = con;
+                
                 cmd.CommandText = "SELECT * FROM Fatura where Fatura_No='" + ad + "' AND Tarih='" + sifre + "'";
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    MessageBox.Show("Bu Fatura Seri NO Zaten sistemde kayıtlı, Lütfen kontrol ediniz.");
+                    MessageBox.Show("Bu Fatura Seri No Zaten sistemde kayıtlı.");
                 }
                 else
                 {
-                    string ekle = "insert into Fatura(Fatura_No,Tarih,Musteri,Musteri2,Musteri3,Vergi_Dairesi,Vergi_No,m1,b1,c1,f1,t1,m2,b2,c2,f2,t2,m3,b3,c3,f3,t3,m4,b4,c4,f4,t4,m5,b5,c5,f5,t5,m6,b6,c6,f6,t6,m7,b7,c7,f7,t7,m8,b8,c8,f8,t8,m9,b9,c9,f9,t9,m10,b10,c10,f10,t10,m11,b11,c11,f11,t11,m12,b12,c12,f12,t12,m13,b13,c13,f13,t13,Yekun,KDV,Toplam,kdvoran,yalniz) values (@Fatura_No,@Tarih,@Musteri,@Musteri2,@Musteri3,@Vergi_Dairesi,@Vergi_No,@m1,@b1,@c1,@f1,@t1,@m2,@b2,@c2,@f2,@t2,@m3,@b3,@c3,@f3,@t3,@m4,@b4,@c4,@f4,@t4,@m5,@b5,@c5,@f5,@t5,@m6,@b6,@c6,@f6,@t6,@m7,@b7,@c7,@f7,@t7,@m8,@b8,@c8,@f8,@t8,@m9,@b9,@c9,@f9,@t9,@m10,@b10,@c10,@f10,@t10,@m11,@b11,@c11,@f11,@t11,@m12,@b12,@c12,@f12,@t12,@m13,@b13,@c13,@f13,@t13,@Yekun,@KDV,@Toplam,@kdvoran,@yalniz)";
+                    string ekle = "insert into Fatura(Fatura_No,Tarih,Musteri,Musteri2,Musteri3,Vergi_Dairesi,Vergi_No,m1,b1,c1,f1,t1,m2,b2,c2,f2,t2,m3,b3,c3,f3,t3,m4,b4,c4,f4,t4,m5,b5,c5,f5,t5,m6,b6,c6,f6,t6,m7,b7,c7,f7,t7,m8,b8,c8,f8,t8,m9,b9,c9,f9,t9,m10,b10,c10,f10,t10,m11,b11,c11,f11,t11,m12,b12,c12,f12,t12,m13,b13,c13,f13,t13,Yekun,KDV,Toplam,kdvoran,yalniz,Odendi,Date1) values (@Fatura_No,@Tarih,@Musteri,@Musteri2,@Musteri3,@Vergi_Dairesi,@Vergi_No,@m1,@b1,@c1,@f1,@t1,@m2,@b2,@c2,@f2,@t2,@m3,@b3,@c3,@f3,@t3,@m4,@b4,@c4,@f4,@t4,@m5,@b5,@c5,@f5,@t5,@m6,@b6,@c6,@f6,@t6,@m7,@b7,@c7,@f7,@t7,@m8,@b8,@c8,@f8,@t8,@m9,@b9,@c9,@f9,@t9,@m10,@b10,@c10,@f10,@t10,@m11,@b11,@c11,@f11,@t11,@m12,@b12,@c12,@f12,@t12,@m13,@b13,@c13,@f13,@t13,@Yekun,@KDV,@Toplam,@kdvoran,@yalniz,@Odendi,@Date1)";
                     cmd = new OleDbCommand(ekle, con);
                     cmd.Parameters.AddWithValue("@Fatura_No", f_no.Text);//Fatura No
-                    cmd.Parameters.AddWithValue("@Tarih", tarih.Text);//Tarih
+                    cmd.Parameters.AddWithValue("@Tarih", dateTimePicker3.Value.ToShortDateString());//Tarih
                     cmd.Parameters.AddWithValue("@Musteri", textBox1.Text);//Müşteri
                     cmd.Parameters.AddWithValue("@Musteri2", textBox2.Text);//Müşteri2
                     cmd.Parameters.AddWithValue("@Musteri3", textBox3.Text);//Müşteri3
@@ -266,11 +597,14 @@ namespace Wantto_Fatura
                     cmd.Parameters.AddWithValue("@Toplam", toplam.Text);
                     cmd.Parameters.AddWithValue("@kdvoran", comboKDV1.Text);
                     cmd.Parameters.AddWithValue("@yalniz", yazile.Text);
-
+                    cmd.Parameters.AddWithValue("@Odendi", "Hayır");
+                    cmd.Parameters.AddWithValue("@Date1", dateTimePicker3.Value.ToShortDateString());//Tarih
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Kayıt başarılı");
                     dataReader();
+                    dr.Close();
                 }
+                musteri();
             }
             else
             {
@@ -280,18 +614,15 @@ namespace Wantto_Fatura
 
         private void saveButton2()
         {
-            if(textBox1.Text != "")
+            if(textBox6.Text != "")
             {
-            string vtyolu = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database1.accdb;Persist Security Info=True";
-            OleDbConnection con = new OleDbConnection(vtyolu);
-            con.Open();
             string ekle = "insert into person(MUSTERI,MUSTERI_2,MUSTERI_3,VERGI_DAIRESI,VERGI_NO) values (@MUSTERI,@MUSTERI_2,@MUSTERI_3,@VERGI_DAIRESI,@VERGI_NO)";
             OleDbCommand cmd = new OleDbCommand(ekle, con);
-            cmd.Parameters.AddWithValue("@MUSTERI", textBox1.Text);//Müşteri
-            cmd.Parameters.AddWithValue("@MUSTERI_2", textBox2.Text);//Müşteri2
-            cmd.Parameters.AddWithValue("@MUSTERI_3", textBox3.Text);//Müşteri3
-            cmd.Parameters.AddWithValue("@VERGI_DAIRESI", vd1.Text);
-            cmd.Parameters.AddWithValue("@VERGI_NO", vd2.Text);
+            cmd.Parameters.AddWithValue("@MUSTERI", textBox6.Text);//Müşteri
+            cmd.Parameters.AddWithValue("@MUSTERI_2", textBox7.Text);//Müşteri2
+            cmd.Parameters.AddWithValue("@MUSTERI_3", textBox8.Text);//Müşteri3
+            cmd.Parameters.AddWithValue("@VERGI_DAIRESI", textBox9.Text);
+            cmd.Parameters.AddWithValue("@VERGI_NO", textBox10.Text);
             cmd.ExecuteNonQuery();
             dataReader();
             MessageBox.Show("Firma Başarıyla kaydedildi");
@@ -301,110 +632,13 @@ namespace Wantto_Fatura
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            f_no.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            tarih.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textBox2.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            textBox3.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            vd1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            vd2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            M1.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            B1.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            C1.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            F1.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-            T1.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
-            //
-            M2.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
-            B2.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
-            C2.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
-            F2.Text = dataGridView1.CurrentRow.Cells[15].Value.ToString();
-            T2.Text = dataGridView1.CurrentRow.Cells[16].Value.ToString();
-            //
-            //
-            M3.Text = dataGridView1.CurrentRow.Cells[17].Value.ToString();
-            B3.Text = dataGridView1.CurrentRow.Cells[18].Value.ToString();
-            C3.Text = dataGridView1.CurrentRow.Cells[19].Value.ToString();
-            F3.Text = dataGridView1.CurrentRow.Cells[20].Value.ToString();
-            T3.Text = dataGridView1.CurrentRow.Cells[21].Value.ToString();
-            //
-            M4.Text = dataGridView1.CurrentRow.Cells[22].Value.ToString();
-            B4.Text = dataGridView1.CurrentRow.Cells[23].Value.ToString();
-            C4.Text = dataGridView1.CurrentRow.Cells[24].Value.ToString();
-            F4.Text = dataGridView1.CurrentRow.Cells[25].Value.ToString();
-            T4.Text = dataGridView1.CurrentRow.Cells[26].Value.ToString();
-            //
-            M5.Text = dataGridView1.CurrentRow.Cells[27].Value.ToString();
-            B5.Text = dataGridView1.CurrentRow.Cells[28].Value.ToString();
-            C5.Text = dataGridView1.CurrentRow.Cells[29].Value.ToString();
-            F5.Text = dataGridView1.CurrentRow.Cells[30].Value.ToString();
-            T5.Text = dataGridView1.CurrentRow.Cells[31].Value.ToString();
-            //
-            M6.Text = dataGridView1.CurrentRow.Cells[32].Value.ToString();
-            B6.Text = dataGridView1.CurrentRow.Cells[33].Value.ToString();
-            C6.Text = dataGridView1.CurrentRow.Cells[34].Value.ToString();
-            F6.Text = dataGridView1.CurrentRow.Cells[35].Value.ToString();
-            T6.Text = dataGridView1.CurrentRow.Cells[36].Value.ToString();
-            //
-            M7.Text = dataGridView1.CurrentRow.Cells[37].Value.ToString();
-            B7.Text = dataGridView1.CurrentRow.Cells[38].Value.ToString();
-            C7.Text = dataGridView1.CurrentRow.Cells[39].Value.ToString();
-            F7.Text = dataGridView1.CurrentRow.Cells[40].Value.ToString();
-            T7.Text = dataGridView1.CurrentRow.Cells[41].Value.ToString();
-            //
-            M8.Text = dataGridView1.CurrentRow.Cells[42].Value.ToString();
-            B8.Text = dataGridView1.CurrentRow.Cells[43].Value.ToString();
-            C8.Text = dataGridView1.CurrentRow.Cells[44].Value.ToString();
-            F8.Text = dataGridView1.CurrentRow.Cells[45].Value.ToString();
-            T8.Text = dataGridView1.CurrentRow.Cells[46].Value.ToString();
-            //
-            M9.Text = dataGridView1.CurrentRow.Cells[47].Value.ToString();
-            B9.Text = dataGridView1.CurrentRow.Cells[48].Value.ToString();
-            C9.Text = dataGridView1.CurrentRow.Cells[49].Value.ToString();
-            F9.Text = dataGridView1.CurrentRow.Cells[50].Value.ToString();
-            T9.Text = dataGridView1.CurrentRow.Cells[51].Value.ToString();
-            //
-            M10.Text = dataGridView1.CurrentRow.Cells[52].Value.ToString();
-            B10.Text = dataGridView1.CurrentRow.Cells[53].Value.ToString();
-            C10.Text = dataGridView1.CurrentRow.Cells[54].Value.ToString();
-            F10.Text = dataGridView1.CurrentRow.Cells[55].Value.ToString();
-            T10.Text = dataGridView1.CurrentRow.Cells[56].Value.ToString();
-            //
-            M11.Text = dataGridView1.CurrentRow.Cells[57].Value.ToString();
-            B11.Text = dataGridView1.CurrentRow.Cells[58].Value.ToString();
-            C11.Text = dataGridView1.CurrentRow.Cells[59].Value.ToString();
-            F11.Text = dataGridView1.CurrentRow.Cells[60].Value.ToString();
-            T11.Text = dataGridView1.CurrentRow.Cells[61].Value.ToString();
-            //
-            M12.Text = dataGridView1.CurrentRow.Cells[62].Value.ToString();
-            B12.Text = dataGridView1.CurrentRow.Cells[63].Value.ToString();
-            C12.Text = dataGridView1.CurrentRow.Cells[64].Value.ToString();
-            F12.Text = dataGridView1.CurrentRow.Cells[65].Value.ToString();
-            T12.Text = dataGridView1.CurrentRow.Cells[66].Value.ToString();
-            //
-            M13.Text = dataGridView1.CurrentRow.Cells[67].Value.ToString();
-            B13.Text = dataGridView1.CurrentRow.Cells[68].Value.ToString();
-            C13.Text = dataGridView1.CurrentRow.Cells[69].Value.ToString();
-            F13.Text = dataGridView1.CurrentRow.Cells[70].Value.ToString();
-            T13.Text = dataGridView1.CurrentRow.Cells[71].Value.ToString();
-            //
-            yekun.Text = dataGridView1.CurrentRow.Cells[72].Value.ToString();
-            kdv.Text = dataGridView1.CurrentRow.Cells[73].Value.ToString();
-            toplam.Text = dataGridView1.CurrentRow.Cells[74].Value.ToString();
-            comboKDV1.Text = dataGridView1.CurrentRow.Cells[75].Value.ToString();
-            yazile.Text = dataGridView1.CurrentRow.Cells[76].Value.ToString();
+            
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                saveButton();
-            }
-            catch
-            {
-                MessageBox.Show("Veritabanı kayıt hatası");
-            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -414,11 +648,11 @@ namespace Wantto_Fatura
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox1.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
-            textBox2.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
-            textBox3.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
-            vd1.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
-            vd2.Text = dataGridView2.CurrentRow.Cells[5].Value.ToString();
+            textBox6.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            textBox7.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            textBox8.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            textBox9.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            textBox10.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void M1_KeyPress(object sender, KeyPressEventArgs e)
@@ -433,36 +667,8 @@ namespace Wantto_Fatura
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string ad = f_no.Text;
-            string sifre = tarih.Text;
-            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
-            cmd = new OleDbCommand();
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM Fatura where Fatura_No='" + ad + "' AND Tarih='" + sifre + "'";
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                Print yazdir = new Print();
-                yazdir.f_no = f_no.Text;
-                yazdir.Show();
-            }
-            else
-            {
-                try
-                {
-                    if(f_no.Text != "")saveButton();
-                    Print yazdir = new Print();
-                    yazdir.f_no = f_no.Text;
-                    yazdir.Show();
-                }
-                catch 
-                {
-                    MessageBox.Show("Yazdırma Hatası");
-                }
-            }
 
-            con.Close();
+
         }
 
         private void M3_KeyPress(object sender, KeyPressEventArgs e)
@@ -611,7 +817,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F1.Text);
                 a1 = a * b;
                 String HesapTutari = (a1).ToString("F2").Replace('.', ',');
-                T1.Text = HesapTutari + " TL";
+                T1.Text = HesapTutari;
             }
             catch
             {
@@ -629,7 +835,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F2.Text);
                 a2 = a * b;
                 String HesapTutari = (a2).ToString("F2").Replace('.', ',');
-                T2.Text = HesapTutari + " TL";
+                T2.Text = HesapTutari;
             }
             catch
             {
@@ -647,7 +853,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F2.Text);
                 a2 = a * b;
                 String HesapTutari = (a2).ToString("F2").Replace('.', ',');
-                T2.Text = HesapTutari + " TL";
+                T2.Text = HesapTutari;
             }
             catch
             {
@@ -665,7 +871,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F3.Text);
                 a3 = a * b;
                 String HesapTutari = (a3).ToString("F2").Replace('.', ',');
-                T3.Text = HesapTutari + " TL";
+                T3.Text = HesapTutari;
             }
             catch
             {
@@ -683,7 +889,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F3.Text);
                 a3 = a * b;
                 String HesapTutari = (a3).ToString("F2").Replace('.', ',');
-                T3.Text = HesapTutari + " TL";
+                T3.Text = HesapTutari;
             }
             catch
             {
@@ -701,12 +907,12 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F4.Text);
                 a4 = a * b;
                 String HesapTutari = (a4).ToString("F2").Replace('.', ',');
-                T4.Text = HesapTutari + " TL";
+                T4.Text = HesapTutari;
             }
             catch
             {
                 a4 = 0;
-                T3.Text = "";
+                T4.Text = "";
                 
             }
         }
@@ -719,7 +925,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F4.Text);
                 a4 = a * b;
                 String HesapTutari = (a4).ToString("F2").Replace('.', ',');
-                T4.Text = HesapTutari + " TL";
+                T4.Text = HesapTutari;
             }
             catch
             {
@@ -737,7 +943,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F5.Text);
                 a5 = a * b;
                 String HesapTutari = (a5).ToString("F2").Replace('.', ',');
-                T5.Text = HesapTutari + " TL";
+                T5.Text = HesapTutari;
             }
             catch
             {
@@ -755,7 +961,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F5.Text);
                 a5 = a * b;
                 String HesapTutari = (a5).ToString("F2").Replace('.', ',');
-                T5.Text = HesapTutari + " TL";
+                T5.Text = HesapTutari;
             }
             catch
             {
@@ -773,7 +979,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F6.Text);
                 a6 = a * b;
                 String HesapTutari = (a6).ToString("F2").Replace('.', ',');
-                T6.Text = HesapTutari + " TL";
+                T6.Text = HesapTutari;
             }
             catch
             {
@@ -791,7 +997,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F6.Text);
                 a6 = a * b;
                 String HesapTutari = (a6).ToString("F2").Replace('.', ',');
-                T6.Text = HesapTutari + " TL";
+                T6.Text = HesapTutari;
             }
             catch
             {
@@ -809,7 +1015,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F7.Text);
                 a7 = a * b;
                 String HesapTutari = (a7).ToString("F2").Replace('.', ',');
-                T7.Text = HesapTutari + " TL";
+                T7.Text = HesapTutari;
             }
             catch
             {
@@ -827,7 +1033,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F7.Text);
                 a7 = a * b;
                 String HesapTutari = (a7).ToString("F2").Replace('.', ',');
-                T7.Text = HesapTutari + " TL";
+                T7.Text = HesapTutari;
             }
             catch
             {
@@ -845,7 +1051,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F8.Text);
                 a8 = a * b;
                 String HesapTutari = (a8).ToString("F2").Replace('.', ',');
-                T8.Text = HesapTutari + " TL";
+                T8.Text = HesapTutari;
             }
             catch
             {
@@ -863,7 +1069,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F8.Text);
                 a8 = a * b;
                 String HesapTutari = (a8).ToString("F2").Replace('.', ',');
-                T8.Text = HesapTutari + " TL";
+                T8.Text = HesapTutari;
             }
             catch
             {
@@ -881,7 +1087,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F9.Text);
                 a9 = a * b;
                 String HesapTutari = (a9).ToString("F2").Replace('.', ',');
-                T9.Text = HesapTutari + " TL";
+                T9.Text = HesapTutari;
             }
             catch
             {
@@ -899,7 +1105,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F9.Text);
                 a9 = a * b;
                 String HesapTutari = (a9).ToString("F2").Replace('.', ',');
-                T9.Text = HesapTutari + " TL";
+                T9.Text = HesapTutari;
             }
             catch
             {
@@ -917,7 +1123,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F10.Text);
                 a10 = a * b;
                 String HesapTutari = (a10).ToString("F2").Replace('.', ',');
-                T10.Text = HesapTutari + " TL";
+                T10.Text = HesapTutari;
             }
             catch
             {
@@ -935,7 +1141,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F10.Text);
                 a10 = a * b;
                 String HesapTutari = (a10).ToString("F2").Replace('.', ',');
-                T10.Text = HesapTutari + " TL";
+                T10.Text = HesapTutari;
             }
             catch
             {
@@ -953,7 +1159,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F11.Text);
                 a11 = a * b;
                 String HesapTutari = (a11).ToString("F2").Replace('.', ',');
-                T11.Text = HesapTutari + " TL";
+                T11.Text = HesapTutari;
             }
             catch
             {
@@ -971,7 +1177,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F11.Text);
                 a11 = a * b;
                 String HesapTutari = (a11).ToString("F2").Replace('.', ',');
-                T11.Text = HesapTutari + " TL";
+                T11.Text = HesapTutari;
             }
             catch
             {
@@ -989,7 +1195,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F12.Text);
                 a12 = a * b;
                 String HesapTutari = (a12).ToString("F2").Replace('.', ',');
-                T12.Text = HesapTutari + " TL";
+                T12.Text = HesapTutari;
             }
             catch
             {
@@ -1007,7 +1213,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F12.Text);
                 a12 = a * b;
                 String HesapTutari = (a12).ToString("F2").Replace('.', ',');
-                T12.Text = HesapTutari + " TL";
+                T12.Text = HesapTutari;
             }
             catch
             {
@@ -1025,7 +1231,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F13.Text);
                 a13 = a * b;
                 String HesapTutari = (a13).ToString("F2").Replace('.', ',');
-                T13.Text = HesapTutari + " TL";
+                T13.Text = HesapTutari;
             }
             catch
             {
@@ -1043,7 +1249,7 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F13.Text);
                 a13 = a * b;
                 String HesapTutari = (a13).ToString("F2").Replace('.', ',');
-                T13.Text = HesapTutari + " TL";
+                T13.Text = HesapTutari;
             }
             catch
             {
@@ -1131,7 +1337,6 @@ namespace Wantto_Fatura
         private void timer1_Tick(object sender, EventArgs e)
         {
             label15.Text = label15.Text.Substring(1) + label15.Text.Substring(0, 1);
-            label16.Text = DateTime.Now.ToString();
         }
 
         private void label15_Click(object sender, EventArgs e)
@@ -1146,7 +1351,6 @@ namespace Wantto_Fatura
             {
                 con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
                 con.Open();
-                con.Close();
             }
             catch
             {
@@ -1154,6 +1358,7 @@ namespace Wantto_Fatura
                 Application.Exit();
             }
             dataReader();
+            musteri();
         }
 
         private void comboKDV1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1176,8 +1381,7 @@ namespace Wantto_Fatura
 
         private void faturaHakkındaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
-            frm.Show();
+
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
@@ -1187,54 +1391,16 @@ namespace Wantto_Fatura
 
         private void tabloyuGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            updateTablo();
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            updateTablo();
-            if (f_no.Text != "") 
-            {
-                string ad = f_no.Text;
-                string sifre = tarih.Text;
-                con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
-                cmd = new OleDbCommand();
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = "SELECT * FROM Fatura where Fatura_No='" + ad + "' AND Tarih='" + sifre + "'";
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    con.Close();
-                }
-                else
-                {
-                    saveButton();
-                    con.Close();
-                }
-            }
+            con.Close();
         }
-        private void advancedSearch() 
-        {
-            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
-            //Arama Bölümü
-            if (radioButton1.Checked) { cmd = new OleDbCommand("SElect *from Fatura where Fatura_No like '" + textBox4.Text + "%'", con); }
-            else if (radioButton2.Checked) { cmd = new OleDbCommand("SElect *from Fatura where Tarih like '" + textBox4.Text + "%'", con); }
-            else if (radioButton3.Checked) { cmd = new OleDbCommand("SElect *from Fatura where Musteri like '" + textBox4.Text + "%'", con); }
-            else
-            {
-                cmd = new OleDbCommand("Select *From Fatura", con);
-                MessageBox.Show("Lütfen aramak istediğiniz kriteri seçiniz");
-            }
-            //Arama Bölümü bitiş
-            da = new OleDbDataAdapter(cmd);
-            dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-        }
+
         private void advancedSearch2()
         {
-            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
             //Arama Bölümü
             cmd = new OleDbCommand("SElect *from person where MUSTERI like '" + textBox5.Text + "%'", con);
             //Arama Bölümü bitiş
@@ -1245,22 +1411,7 @@ namespace Wantto_Fatura
         }
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            advancedSearch();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            advancedSearch();
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            advancedSearch();
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            advancedSearch();
+            dataReader();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -1270,17 +1421,256 @@ namespace Wantto_Fatura
 
         private void kutucuklarıTemizleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                saveButton2();
-            }
-            catch
-            {
-                MessageBox.Show("Veritabanı kayıt hatası");
-            }
+
         }
 
+        private void kayıtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveButton();
+        }
 
+        private void firmayıKaydetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveButton2();
+        }
 
+        private void yazdırToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveButton();
+            if(f_no.Text != "") fyazdir();
+
+        }
+
+        private void temizleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textDelete();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            serial = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "delete from Fatura where Fatura_No='" + serial + "'";
+            cmd.ExecuteNonQuery();
+            dataReader1();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            serial = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "update Fatura set odendi='Evet' where Fatura_No='" + serial + "'";
+            cmd.ExecuteNonQuery();
+            dataReader1();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            serial = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "update Fatura set odendi='Hayır' where Fatura_No='" + serial + "'";
+            cmd.ExecuteNonQuery();
+            dataReader1();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            dataReader();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            dataReader();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dataReader1();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            dataReader1();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            serial = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "delete from Person where MUSTERI='" + serial + "'";
+            cmd.ExecuteNonQuery();
+            dataReader2();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            serial = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            textBox1.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            serial = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            textBox2.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            textBox3.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            vd1.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            vd2.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void açToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            serial = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM Fatura where Fatura_No='" + serial + "'";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                
+                f_no.Text = dr["Fatura_No"].ToString();
+                string tarih = dr["Tarih"].ToString();
+                DateTime oDate = DateTime.Parse(tarih);
+                dateTimePicker3.Value = oDate;
+                textBox1.Text = dr["Musteri"].ToString();
+                textBox2.Text = dr["Musteri2"].ToString();
+                textBox3.Text = dr["Musteri3"].ToString();
+                vd1.Text = dr["Vergi_Dairesi"].ToString();
+                vd2.Text = dr["Vergi_No"].ToString();
+                M1.Text = dr["m1"].ToString();
+                B1.Text = dr["b1"].ToString();
+                C1.Text = dr["c1"].ToString();
+                F1.Text = dr["f1"].ToString();
+                T1.Text = dr["t1"].ToString();
+                //
+                M2.Text = dr["m2"].ToString();
+                B2.Text = dr["b2"].ToString();
+                C2.Text = dr["c2"].ToString();
+                F2.Text = dr["f2"].ToString();
+                T2.Text = dr["t2"].ToString();
+                //
+                //
+                M3.Text = dr["m3"].ToString();
+                B3.Text = dr["b3"].ToString();
+                C3.Text = dr["c3"].ToString();
+                F3.Text = dr["f3"].ToString();
+                T3.Text = dr["t3"].ToString();
+                //
+                M4.Text = dr["m4"].ToString();
+                B4.Text = dr["b4"].ToString();
+                C4.Text = dr["c4"].ToString();
+                F4.Text = dr["f4"].ToString();
+                T4.Text = dr["t4"].ToString();
+                //
+                M5.Text = dr["m5"].ToString();
+                B5.Text = dr["b5"].ToString();
+                C5.Text = dr["c5"].ToString();
+                F5.Text = dr["f5"].ToString();
+                T5.Text = dr["t5"].ToString();
+                //
+                M6.Text = dr["m6"].ToString();
+                B6.Text = dr["b6"].ToString();
+                C6.Text = dr["c6"].ToString();
+                F6.Text = dr["f6"].ToString();
+                T6.Text = dr["t6"].ToString();
+                //
+                M7.Text = dr["m7"].ToString();
+                B7.Text = dr["b7"].ToString();
+                C7.Text = dr["c7"].ToString();
+                F7.Text = dr["f7"].ToString();
+                T7.Text = dr["t7"].ToString();
+                //
+                M8.Text = dr["m8"].ToString();
+                B8.Text = dr["b8"].ToString();
+                C8.Text = dr["c8"].ToString();
+                F8.Text = dr["f8"].ToString();
+                T8.Text = dr["t8"].ToString();
+                //
+                M9.Text = dr["m9"].ToString();
+                B9.Text = dr["b9"].ToString();
+                C9.Text = dr["c9"].ToString();
+                F9.Text = dr["f9"].ToString();
+                T9.Text = dr["t9"].ToString();
+                //
+                M10.Text = dr["m10"].ToString();
+                B10.Text = dr["b10"].ToString();
+                C10.Text = dr["c10"].ToString();
+                F10.Text = dr["f10"].ToString();
+                T10.Text = dr["t10"].ToString();
+                //
+                M11.Text = dr["m11"].ToString();
+                B11.Text = dr["b11"].ToString();
+                C11.Text = dr["c11"].ToString();
+                F11.Text = dr["f11"].ToString();
+                T11.Text = dr["t11"].ToString();
+                //
+                M12.Text = dr["m12"].ToString();
+                B12.Text = dr["b12"].ToString();
+                C12.Text = dr["c12"].ToString();
+                F12.Text = dr["f12"].ToString();
+                T12.Text = dr["t12"].ToString();
+                //
+                M13.Text = dr["m13"].ToString();
+                B13.Text = dr["b13"].ToString();
+                C13.Text = dr["c13"].ToString();
+                F13.Text = dr["f13"].ToString();
+                T13.Text = dr["t13"].ToString();
+                //
+                yekun.Text = dr["Yekun"].ToString();
+                kdv.Text = dr["KDV"].ToString();
+                toplam.Text = dr["Toplam"].ToString();
+                comboKDV1.Text = dr["kdvoran"].ToString();
+                yazile.Text = dr["yalniz"].ToString();
+            }
+            dr.Close();
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            saveButton2();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            serial = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "update person set MUSTERI='"+ textBox6.Text + "', MUSTERI_2='" + textBox7.Text + "', MUSTERI_3='" + textBox8.Text + "', VERGI_DAIRESI='" + textBox9.Text + "', VERGI_NO='" + textBox10.Text + "' where MUSTERI='" + serial + "'";
+            cmd.ExecuteNonQuery();
+            dataReader2();
+        }
+
+        private void formAyarlarıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+            frm.Show();
+        }
+
+        private void hakkındaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataReader();
+        }
+
+        private void çıkışToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

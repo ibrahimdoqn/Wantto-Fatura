@@ -6,12 +6,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Wantto Fatura")]
+[assembly: AssemblyTitle("Fatura")]
 [assembly: AssemblyDescription("By İbrahim DOĞAN")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("DOGAN Yazılım")]
-[assembly: AssemblyProduct("Wantto Fatura")]
-[assembly: AssemblyCopyright("Wantto Copyright ©  2018")]
+[assembly: AssemblyProduct("DOGAN Fatura")]
+[assembly: AssemblyCopyright("DOGAN Yazılım Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,6 +33,6 @@ using System.Resources;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1")]
-[assembly: AssemblyFileVersion("1.1")]
+[assembly: AssemblyVersion("2.1")]
+[assembly: AssemblyFileVersion("2.1")]
 [assembly: NeutralResourcesLanguageAttribute("tr")]

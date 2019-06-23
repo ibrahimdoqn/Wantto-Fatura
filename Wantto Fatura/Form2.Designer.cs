@@ -36,11 +36,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 9);
+            this.label1.Location = new System.Drawing.Point(97, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
+            this.label1.Size = new System.Drawing.Size(103, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Wantto Fatura Yazılımı v1.1";
+            this.label1.Text = "DOGAN Fatura v2.0";
             // 
             // richTextBox1
             // 
@@ -50,18 +50,17 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(260, 208);
             this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "09.05.2018 Tarihinde İbrahim DOĞAN Tarafından oluşturulmuştur.\nÜcretsiz Open-Sour" +
-                "ce yazılım olup para karşılığı satılması kiralanması yasaktır.\n\ngithub.com/ibrah" +
-                "imdoqn";
+            this.richTextBox1.Text = "09.05.2018 Tarihinde İbrahim DOĞAN Tarafından oluşturulmuştur.\ngithub.com/ibrahim" +
+    "doqn";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 239);
+            this.label2.Location = new System.Drawing.Point(100, 239);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Wantto™ 2018";
+            this.label2.Text = "DOGAN™ 2019";
             // 
             // Form2
             // 
@@ -71,6 +70,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
             this.Text = "Hakkında";
             this.ResumeLayout(false);

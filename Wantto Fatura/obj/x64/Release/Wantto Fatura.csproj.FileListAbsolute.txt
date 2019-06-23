@@ -1,0 +1,73 @@
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Wantto Fatura.exe.config
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Wantto Fatura.exe.manifest
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Wantto Fatura.application
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Wantto Fatura.exe
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Wantto Fatura.pdb
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.CrystalReports.Engine.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportSource.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.Shared.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.Windows.Forms.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\FlashControlV71.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\ShockwaveFlashObjects.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\stdole.dll
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csprojAssemblyReference.cache
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form1.resources
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form2.resources
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Print.resources
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Properties.Resources.resources
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.GenerateResource.cache
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.CoreCompileInputs.cache
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.TrustInfo.xml
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.exe.manifest
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.application
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.CopyComplete
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.exe
+D:\Dogan Software\Wantto-Fatura-master\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.pdb
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csprojAssemblyReference.cache
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form1.resources
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form2.resources
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.GenerateResource.cache
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.CoreCompileInputs.cache
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form3.resources
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe.config
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.pdb
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.Properties.Resources.resources
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.exe
+C:\Users\DOGAN\Desktop\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.pdb
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe.config
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.pdb
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csprojAssemblyReference.cache
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form1.resources
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form2.resources
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form3.resources
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.Properties.Resources.resources
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.GenerateResource.cache
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.CoreCompileInputs.cache
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.exe
+C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.pdb
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe.config
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.pdb
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csprojAssemblyReference.cache
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form1.resources
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form2.resources
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form3.resources
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.Properties.Resources.resources
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.GenerateResource.cache
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.CoreCompileInputs.cache
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.exe
+C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.pdb

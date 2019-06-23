@@ -1,20 +1,31 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wantto Fatura", "Wantto Fatura\Wantto Fatura.csproj", "{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}.Debug|x64.ActiveCfg = Release|x64
+		{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}.Debug|x64.Build.0 = Release|x64
 		{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}.Debug|x86.ActiveCfg = Debug|x86
 		{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}.Debug|x86.Build.0 = Debug|x86
+		{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}.Release|x64.ActiveCfg = Release|x64
+		{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}.Release|x64.Build.0 = Release|x64
 		{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}.Release|x86.ActiveCfg = Release|x86
 		{BC5EC9FE-4D38-4400-8BC4-3BC5C1B5CCD2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6B3251E-8D91-4955-A94A-6461F4920E7A}
 	EndGlobalSection
 EndGlobal
