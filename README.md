@@ -3,7 +3,7 @@ Created 10.05.2018 for Ersin Sondaj Ve Torna Company<br>
 Database File \Bin\Release\Database1.accdb<br>
 Visual Stdio 2017 ve NET 4.7.1 Kullanılmıştır.<br>
 Programı çalıştırmak için Access Database Engine ve Access Runtime Gereklidir.<br>
-<img src="https://i.hizliresim.com/kMk7mA.jpg"><br>
+<a href="https://resmim.net/preview/q3TOlO.jpg"><img src="https://resmim.net/f/q3TOlO.jpg"></a><br>
 Özellikler:<br>
 Firma kayıt etme<br>
 Firmaya özel fatura takibi<br>
