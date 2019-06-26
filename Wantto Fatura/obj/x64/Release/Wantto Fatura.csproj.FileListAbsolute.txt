@@ -59,15 +59,15 @@ C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\
 C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.CoreCompileInputs.cache
 C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.exe
 C:\Users\DOGAN\Desktop\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.pdb
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe.config
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.pdb
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csprojAssemblyReference.cache
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form1.resources
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form2.resources
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form3.resources
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.Properties.Resources.resources
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.GenerateResource.cache
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.CoreCompileInputs.cache
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.exe
-C:\Users\DOGAN\Desktop\Fatura 23.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.pdb
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe.config
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.exe
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\bin\x64\Release\Fatura.pdb
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csprojAssemblyReference.cache
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form1.resources
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form2.resources
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto_Fatura.Form3.resources
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.Properties.Resources.resources
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.GenerateResource.cache
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Wantto Fatura.csproj.CoreCompileInputs.cache
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.exe
+C:\Users\DOGAN\Desktop\Projelerim\Fatura 22.06.2019\Wantto-Fatura-master\Wantto Fatura\obj\x64\Release\Fatura.pdb

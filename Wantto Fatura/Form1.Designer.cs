@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -176,7 +176,10 @@
             this.yazdırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.serviceController1 = new System.ServiceProcess.ServiceController();
-            this.çıkışToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.sayfaÖnizlemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yazdırToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -214,8 +217,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.tabPage1.BackgroundImage = global::Fatura.Properties.Resources._7c2f345bdfcadb8a3faf483ebaa2e9aea712bbdb;
-            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.label15);
@@ -229,7 +230,6 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.M1);
@@ -974,7 +974,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.dateTimePicker3);
             this.groupBox4.Controls.Add(this.textBox1);
@@ -1566,12 +1565,12 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 2);
@@ -1588,8 +1587,7 @@
             this.menüToolStripMenuItem,
             this.temizleToolStripMenuItem,
             this.kayıtToolStripMenuItem,
-            this.yazdırToolStripMenuItem,
-            this.çıkışToolStripMenuItem1});
+            this.yazdırToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(576, 24);
@@ -1605,6 +1603,7 @@
             this.menüToolStripMenuItem.Name = "menüToolStripMenuItem";
             this.menüToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menüToolStripMenuItem.Text = "Menü";
+            this.menüToolStripMenuItem.Click += new System.EventHandler(this.menüToolStripMenuItem_Click);
             // 
             // hakkındaToolStripMenuItem
             // 
@@ -1643,6 +1642,9 @@
             // 
             // yazdırToolStripMenuItem
             // 
+            this.yazdırToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sayfaÖnizlemeToolStripMenuItem,
+            this.yazdırToolStripMenuItem1});
             this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
             this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.yazdırToolStripMenuItem.Text = "Yazdır";
@@ -1652,25 +1654,45 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // çıkışToolStripMenuItem1
+            // printDialog1
             // 
-            this.çıkışToolStripMenuItem1.Name = "çıkışToolStripMenuItem1";
-            this.çıkışToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
-            this.çıkışToolStripMenuItem1.Text = "Çıkış";
-            this.çıkışToolStripMenuItem1.Click += new System.EventHandler(this.çıkışToolStripMenuItem1_Click);
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Text = "Baskı önizleme";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // sayfaÖnizlemeToolStripMenuItem
+            // 
+            this.sayfaÖnizlemeToolStripMenuItem.Name = "sayfaÖnizlemeToolStripMenuItem";
+            this.sayfaÖnizlemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sayfaÖnizlemeToolStripMenuItem.Text = "Sayfa Önizleme";
+            this.sayfaÖnizlemeToolStripMenuItem.Click += new System.EventHandler(this.sayfaÖnizlemeToolStripMenuItem_Click);
+            // 
+            // yazdırToolStripMenuItem1
+            // 
+            this.yazdırToolStripMenuItem1.Name = "yazdırToolStripMenuItem1";
+            this.yazdırToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.yazdırToolStripMenuItem1.Text = "Yazdır";
+            this.yazdırToolStripMenuItem1.Click += new System.EventHandler(this.yazdırToolStripMenuItem1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(576, 675);
-            this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fatura V2.1 - DOGAN YAZILIM";
@@ -1855,7 +1877,10 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.ToolStripMenuItem sayfaÖnizlemeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yazdırToolStripMenuItem1;
     }
 }
 

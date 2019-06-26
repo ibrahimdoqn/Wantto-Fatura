@@ -93,6 +93,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -162,7 +163,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Document %288%29.ico" />
-    <None Include="Resources\7c2f345bdfcadb8a3faf483ebaa2e9aea712bbdb.jpg" />
+    <None Include="Resources\aşağı.png" />
+    <None Include="Resources\yukarı.png" />
+    <None Include="Resources\sol.png" />
+    <None Include="Resources\sağ.png" />
+    <None Include="Resources\iconfinder_arrow-left-01_186410.png" />
+    <None Include="Resources\iconfinder_arrow-right-01_186409.png" />
+    <None Include="Resources\iconfinder_arrow-up-01_186407.png" />
+    <None Include="Resources\iconfinder_arrow-down-01_186411.png" />
     <Content Include="Text Document.ico" />
   </ItemGroup>
   <ItemGroup />

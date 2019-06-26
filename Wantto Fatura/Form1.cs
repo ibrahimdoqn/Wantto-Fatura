@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Drawing.Printing;
+using System.IO;
 
 namespace Wantto_Fatura
 {
@@ -28,15 +29,45 @@ namespace Wantto_Fatura
         public Form1()
         {
             InitializeComponent();
-            pDoc = new PrintDocument();
+        }
 
-            // Print event'i yaratiliyor.
+        //Kağıt Boyutu ayarlama
+        public static System.Drawing.Printing.PaperSize CalculatePaperSize(double WidthInCentimeters, double HeightInCentimetres)
+        {
+            int Width = int.Parse((Math.Round((WidthInCentimeters * 0.393701) * 100, 0, MidpointRounding.AwayFromZero)).ToString());
+            int Height = int.Parse((Math.Round((HeightInCentimetres * 0.393701) * 100, 0, MidpointRounding.AwayFromZero)).ToString());
+            PaperSize NewSize = new PaperSize();
+            NewSize.RawKind = (int)PaperKind.Custom;
+            NewSize.Width = Width;
+            NewSize.Height = Height;
+            NewSize.PaperName = "Letter";
+            return NewSize;
+        }
+
+        public void printingCode()
+        {
+            saveButton();
+            int formBoy = 28, formEn = 20;
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT formBoy, formEn FROM Form";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                formBoy = Convert.ToInt32(dr[0]);
+                formEn = Convert.ToInt32(dr[1]);
+
+            }
+            dr.Close();
+            pDoc = new PrintDocument();
             pDoc.PrintPage += new PrintPageEventHandler(pDoc_PrintPage);
+            pDoc.DefaultPageSettings.PaperSize = CalculatePaperSize(formEn, formBoy);
         }
 
         // Print Fonksionu
         void pDoc_PrintPage(object sender, PrintPageEventArgs e)
         {
+
             //Fatura ayarları
             float SatirAralik = 10f;
             //Üstten
@@ -51,7 +82,6 @@ namespace Wantto_Fatura
             //Yandan
             float cBaslangic = 10f;
             float mBaslangic = 50f;
-            float bBaslangic = 75f;
             float fBaslangic = 90f;
             float tBaslangic = 110f;
             float sayinYandan = 10f;
@@ -62,8 +92,6 @@ namespace Wantto_Fatura
             float kdvYandan = 150;
             float toplamYandan = 150f;
             float yazileYandan = 50f;
-            float tarihBosluk1 = 10f;
-            float tarihBosluk2 = 20f;
 
             cmd = new OleDbCommand();
             cmd.Connection = con;
@@ -82,19 +110,17 @@ namespace Wantto_Fatura
                 yazileBaslangic = float.Parse(dr[9].ToString());
                 cBaslangic = float.Parse(dr[10].ToString());
                 mBaslangic = float.Parse(dr[11].ToString());
-                bBaslangic = float.Parse(dr[12].ToString());
-                fBaslangic = float.Parse(dr[13].ToString());
-                tBaslangic = float.Parse(dr[14].ToString());
-                sayinYandan = float.Parse(dr[15].ToString());
-                vd1Yandan = float.Parse(dr[16].ToString());
-                vd2Yandan = float.Parse(dr[17].ToString());
-                tarihYandan = float.Parse(dr[18].ToString());
-                yekunYandan = float.Parse(dr[19].ToString());
-                kdvYandan = float.Parse(dr[20].ToString());
-                toplamYandan = float.Parse(dr[21].ToString());
-                yazileYandan = float.Parse(dr[22].ToString());
-                tarihBosluk1 = float.Parse(dr[23].ToString());
-                tarihBosluk2 = float.Parse(dr[24].ToString());
+                fBaslangic = float.Parse(dr[12].ToString());
+                tBaslangic = float.Parse(dr[13].ToString());
+                sayinYandan = float.Parse(dr[14].ToString());
+                vd1Yandan = float.Parse(dr[15].ToString());
+                vd2Yandan = float.Parse(dr[16].ToString());
+                tarihYandan = float.Parse(dr[17].ToString());
+                yekunYandan = float.Parse(dr[18].ToString());
+                kdvYandan = float.Parse(dr[19].ToString());
+                toplamYandan = float.Parse(dr[20].ToString());
+                yazileYandan = float.Parse(dr[21].ToString());
+
             }
                 dr.Close();
             float aralik(float baslangic, float Satir)
@@ -118,8 +144,18 @@ namespace Wantto_Fatura
             // ben genelde point kullanmaktan yana degilimdir gerci
             // bu yuzden tanimlamayi pointsiz yapalim.
 
+            if (File.Exists(@"IMG.jpg") == true)
+            {
+                Image aImg = Image.FromFile(@"IMG.jpg");
+                e.Graphics.DrawImage(aImg, 0, 0, 200, 280);
+            }
+                
 
-
+            // Resim ekleme sol'dan 10 mm, yukardan 25 mm atliyarak
+            // resmi resize etmek isterseniz bunuda bunuda
+            // genislik 30 mm yukseklik 42 mm olarak atadik.
+            
+            
             //Sayın Kısmı
             e.Graphics.DrawString(textBox1.Text, aFont, Brushes.Black, sayinYandan, aralik(sayinBaslangic, 0f));
             e.Graphics.DrawString(textBox2.Text, aFont, Brushes.Black, sayinYandan, aralik(sayinBaslangic, 1f));
@@ -128,117 +164,110 @@ namespace Wantto_Fatura
             e.Graphics.DrawString(vd1.Text, aFont, Brushes.Black, vd1Yandan, vdBaslangic);
             e.Graphics.DrawString(vd2.Text, aFont, Brushes.Black, vd2Yandan, vdBaslangic);
             //Tarih
-            //e.Graphics.DrawString(dateTimePicker3.Value.ToShortDateString(), aFont, Brushes.Black, tarihYandan, tarihBaslangic);
-            string fYear = dateTimePicker3.Value.Year.ToString();
-            string fMonth = dateTimePicker3.Value.Month.ToString();
-            string fDay = dateTimePicker3.Value.Month.ToString();
-            string fYear2 = fYear[2].ToString() + fYear[3].ToString();
-            e.Graphics.DrawString(fDay, aFont, Brushes.Black, tarihYandan, tarihBaslangic);
-            e.Graphics.DrawString(fMonth, aFont, Brushes.Black, tarihYandan + tarihBosluk1, tarihBaslangic);
-            e.Graphics.DrawString(fYear2, aFont, Brushes.Black, tarihYandan + tarihBosluk1 + tarihBosluk2, tarihBaslangic);
+            e.Graphics.DrawString(dateTimePicker3.Value.ToShortDateString(), aFont, Brushes.Black, tarihYandan, tarihBaslangic);
             //Fatura Detayları
 
             if (C1.Text != "")
             {
                 e.Graphics.DrawString(C1.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic,0f));
-                e.Graphics.DrawString(M1.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 0f));
-                e.Graphics.DrawString(B1.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 0f));
+                e.Graphics.DrawString(M1.Text + " " + B1.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 0f));
+                //e.Graphics.DrawString(B1.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 0f));
                 e.Graphics.DrawString(F1.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 0f));
                 e.Graphics.DrawString(T1.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 0f));
             }
             if (C2.Text != "")
             {
                 e.Graphics.DrawString(C2.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 1f));
-                e.Graphics.DrawString(M2.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 1f));
-                e.Graphics.DrawString(B2.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 1f));
+                e.Graphics.DrawString(M2.Text + " " + B2.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 1f));
+                //e.Graphics.DrawString(B2.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 1f));
                 e.Graphics.DrawString(F2.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 1f));
                 e.Graphics.DrawString(T2.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 1f));
             }
             if (C3.Text != "")
             {
                 e.Graphics.DrawString(C3.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 2f));
-                e.Graphics.DrawString(M3.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 2f));
-                e.Graphics.DrawString(B3.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 2f));
+                e.Graphics.DrawString(M3.Text + " " + B3.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 2f));
+                //e.Graphics.DrawString(B3.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 2f));
                 e.Graphics.DrawString(F3.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 2f));
                 e.Graphics.DrawString(T3.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 2f));
             }
             if (C4.Text != "")
             {
                 e.Graphics.DrawString(C4.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 3f));
-                e.Graphics.DrawString(M4.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 3f));
-                e.Graphics.DrawString(B4.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 3f));
+                e.Graphics.DrawString(M4.Text + " " + B4.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 3f));
+                //e.Graphics.DrawString(B4.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 3f));
                 e.Graphics.DrawString(F4.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 3f));
                 e.Graphics.DrawString(T4.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 3f));
             }
             if (C5.Text != "")
             {
                 e.Graphics.DrawString(C5.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 4f));
-                e.Graphics.DrawString(M5.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 4f));
-                e.Graphics.DrawString(B5.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 4f));
+                e.Graphics.DrawString(M5.Text + " " + B5.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 4f));
+                //e.Graphics.DrawString(B5.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 4f));
                 e.Graphics.DrawString(F5.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 4f));
                 e.Graphics.DrawString(T5.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 4f));
             }
             if (C6.Text != "")
             {
                 e.Graphics.DrawString(C6.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 5f));
-                e.Graphics.DrawString(M6.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 5f));
-                e.Graphics.DrawString(B6.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 5f));
+                e.Graphics.DrawString(M6.Text + " " + B6.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 5f));
+                //e.Graphics.DrawString(B6.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 5f));
                 e.Graphics.DrawString(F6.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 5f));
                 e.Graphics.DrawString(T6.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 5f));
             }
             if (C7.Text != "")
             {
                 e.Graphics.DrawString(C7.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 6f));
-                e.Graphics.DrawString(M7.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 6f));
-                e.Graphics.DrawString(B7.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 6f));
+                e.Graphics.DrawString(M7.Text + " " + B7.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 6f));
+                //e.Graphics.DrawString(B7.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 6f));
                 e.Graphics.DrawString(F7.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 6f));
                 e.Graphics.DrawString(T7.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 6f));
             }
             if (C8.Text != "")
             {
                 e.Graphics.DrawString(C8.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 7f));
-                e.Graphics.DrawString(M8.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 7f));
-                e.Graphics.DrawString(B8.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 7f));
+                e.Graphics.DrawString(M8.Text + " " + B8.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 7f));
+                //e.Graphics.DrawString(B8.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 7f));
                 e.Graphics.DrawString(F8.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 7f));
                 e.Graphics.DrawString(T8.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 7f));
             }
             if (C9.Text != "")
             {
                 e.Graphics.DrawString(C9.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 8f));
-                e.Graphics.DrawString(M9.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 8f));
-                e.Graphics.DrawString(B9.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 8f));
+                e.Graphics.DrawString(M9.Text + " " + B9.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 8f));
+                //e.Graphics.DrawString(B9.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 8f));
                 e.Graphics.DrawString(F9.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 8f));
                 e.Graphics.DrawString(T9.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 8f));
             }
             if (C10.Text != "")
             {
                 e.Graphics.DrawString(C10.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 9f));
-                e.Graphics.DrawString(M10.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 9f));
-                e.Graphics.DrawString(B10.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 9f));
+                e.Graphics.DrawString(M10.Text + " " + B10.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 9f));
+                //e.Graphics.DrawString(B10.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 9f));
                 e.Graphics.DrawString(F10.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 9f));
                 e.Graphics.DrawString(T10.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 9f));
             }
             if (C11.Text != "")
             {
                 e.Graphics.DrawString(C11.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 10f));
-                e.Graphics.DrawString(M11.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 10f));
-                e.Graphics.DrawString(B11.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 10f));
+                e.Graphics.DrawString(M11.Text + " " + B11.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 10f));
+                //e.Graphics.DrawString(B11.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 10f));
                 e.Graphics.DrawString(F11.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 10f));
                 e.Graphics.DrawString(T11.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 10f));
             }
             if (C12.Text != "")
             {
                 e.Graphics.DrawString(C12.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 11f));
-                e.Graphics.DrawString(M12.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 11f));
-                e.Graphics.DrawString(B12.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 11f));
+                e.Graphics.DrawString(M12.Text + " " + B12.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 11f));
+                //e.Graphics.DrawString(B12.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 11f));
                 e.Graphics.DrawString(F12.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 11f));
                 e.Graphics.DrawString(T12.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 11f));
             }
             if (C13.Text != "")
             {
                 e.Graphics.DrawString(C13.Text, aFont, Brushes.Black, cBaslangic, aralik(detayBaslangic, 12f));
-                e.Graphics.DrawString(M13.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 12f));
-                e.Graphics.DrawString(B13.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 12f));
+                e.Graphics.DrawString(M13.Text + " " + B13.Text, aFont, Brushes.Black, mBaslangic, aralik(detayBaslangic, 12f));
+                //e.Graphics.DrawString(B13.Text, aFont, Brushes.Black, bBaslangic, aralik(detayBaslangic, 12f));
                 e.Graphics.DrawString(F13.Text + " TL", aFont, Brushes.Black, fBaslangic, aralik(detayBaslangic, 12f));
                 e.Graphics.DrawString(T13.Text + " TL", aFont, Brushes.Black, tBaslangic, aralik(detayBaslangic, 12f));
             }
@@ -250,20 +279,15 @@ namespace Wantto_Fatura
             e.Graphics.DrawString(yazile.Text, aFont, Brushes.Black, yazileYandan, yazileBaslangic);
         }
 
-        private void fyazdir()
+        public void fyazdir()
         {
-            // suan bir printer belirtmedigimiz icin default printer'a atacaktir.
-            // printer tanitmak icin usteki fonksionda islem yapilmalidir veyahut
-            // print dialog nesnesi kullanilmalidir.
-            // ikidinide size gostermek istiyorum.
-            // pDoc.Print();
-
-            // Print Dialog olusturdugumuz zaman
-            PrintDialog apDialog = new PrintDialog();
-
-            // Hangi dokumana bagli oldugunu seceriz.
-            apDialog.Document = pDoc;
-            pDoc.Print();
+            printPreviewDialog1.Document = pDoc;
+            DialogResult sayfaOnizleme;
+            sayfaOnizleme = printPreviewDialog1.ShowDialog();
+            if (sayfaOnizleme == DialogResult.OK)
+            {
+                pDoc.Print();
+            }
         }
 
         public void dataReader() 
@@ -799,13 +823,12 @@ namespace Wantto_Fatura
                 Double b = Convert.ToDouble(F1.Text);
                 a1 = a * b;
                 String HesapTutari = (a1).ToString("F2").Replace('.', ',');
-                T1.Text = HesapTutari + " TL";
+                T1.Text = HesapTutari;
             }
             catch 
             {
                 a1 = 0;
                 T1.Text = "";
-                
             }
         }
 
@@ -1436,8 +1459,6 @@ namespace Wantto_Fatura
 
         private void yazdırToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveButton();
-            if(f_no.Text != "") fyazdir();
 
         }
 
@@ -1668,9 +1689,27 @@ namespace Wantto_Fatura
             dataReader();
         }
 
-        private void çıkışToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void menüToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+        }
+
+        private void yazdırToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            printingCode();
+            printDialog1.Document = pDoc;
+            DialogResult yazdirmaIslemi;
+            yazdirmaIslemi = printDialog1.ShowDialog();
+            if (yazdirmaIslemi == DialogResult.OK)
+            {
+                pDoc.Print();
+            }
+        }
+
+        private void sayfaÖnizlemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printingCode();
+            fyazdir();
         }
     }
 }

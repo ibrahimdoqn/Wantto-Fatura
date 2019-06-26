@@ -63,9 +63,79 @@ namespace Fatura.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _7c2f345bdfcadb8a3faf483ebaa2e9aea712bbdb {
+        internal static System.Drawing.Bitmap aşağı {
             get {
-                object obj = ResourceManager.GetObject("7c2f345bdfcadb8a3faf483ebaa2e9aea712bbdb", resourceCulture);
+                object obj = ResourceManager.GetObject("aşağı", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_arrow_down_01_186411 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_arrow-down-01_186411", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_arrow_left_01_186410 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_arrow-left-01_186410", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_arrow_right_01_186409 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_arrow-right-01_186409", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_arrow_up_01_186407 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_arrow-up-01_186407", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap sağ {
+            get {
+                object obj = ResourceManager.GetObject("sağ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap sol {
+            get {
+                object obj = ResourceManager.GetObject("sol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap yukarı {
+            get {
+                object obj = ResourceManager.GetObject("yukarı", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
