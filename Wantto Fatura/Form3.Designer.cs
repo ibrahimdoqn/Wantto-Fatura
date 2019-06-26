@@ -107,10 +107,16 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button46 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -121,6 +127,7 @@
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -943,55 +950,124 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.checkBox1);
             this.groupBox10.Controls.Add(this.label2);
             this.groupBox10.Controls.Add(this.label1);
             this.groupBox10.Controls.Add(this.textBox23);
             this.groupBox10.Controls.Add(this.textBox12);
             this.groupBox10.Location = new System.Drawing.Point(67, 268);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(360, 51);
+            this.groupBox10.Size = new System.Drawing.Size(382, 51);
             this.groupBox10.TabIndex = 95;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Kağıt Boyutu";
             // 
-            // textBox12
+            // checkBox1
             // 
-            this.textBox12.Location = new System.Drawing.Point(58, 19);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 0;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(293, 20);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(73, 17);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Özel Form";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // textBox23
+            // label2
             // 
-            this.textBox23.Location = new System.Drawing.Point(217, 19);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 20);
-            this.textBox23.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(154, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "En";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 22);
+            this.label1.Location = new System.Drawing.Point(10, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Boy";
             // 
-            // label2
+            // textBox23
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(191, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "En";
+            this.textBox23.Location = new System.Drawing.Point(180, 19);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 20);
+            this.textBox23.TabIndex = 1;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(42, 19);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 20);
+            this.textBox12.TabIndex = 0;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.button1);
+            this.groupBox11.Controls.Add(this.button8);
+            this.groupBox11.Controls.Add(this.button9);
+            this.groupBox11.Controls.Add(this.button46);
+            this.groupBox11.Location = new System.Drawing.Point(67, 325);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(382, 54);
+            this.groupBox11.TabIndex = 96;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Kenar Boşluklarını Düzelt";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(191, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 20);
+            this.button1.TabIndex = 72;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Location = new System.Drawing.Point(211, 20);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(20, 20);
+            this.button8.TabIndex = 73;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.Location = new System.Drawing.Point(165, 19);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(20, 21);
+            this.button9.TabIndex = 74;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button46
+            // 
+            this.button46.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button46.Location = new System.Drawing.Point(143, 19);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(20, 21);
+            this.button46.TabIndex = 75;
+            this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.button46_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(487, 331);
+            this.ClientSize = new System.Drawing.Size(487, 391);
+            this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
@@ -1026,6 +1102,7 @@
             this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1114,5 +1191,11 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button46;
     }
 }

@@ -46,22 +46,26 @@ namespace Wantto_Fatura
 
         public void printingCode()
         {
+            int switch1 = 0;
             saveButton();
             int formBoy = 28, formEn = 20;
             cmd = new OleDbCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT formBoy, formEn FROM Form";
+            cmd.CommandText = "SELECT formBoy, formEn, customForm FROM Form";
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 formBoy = Convert.ToInt32(dr[0]);
                 formEn = Convert.ToInt32(dr[1]);
-
+                if(dr[2].ToString() == "1")switch1 = 1;
             }
             dr.Close();
             pDoc = new PrintDocument();
             pDoc.PrintPage += new PrintPageEventHandler(pDoc_PrintPage);
-            pDoc.DefaultPageSettings.PaperSize = CalculatePaperSize(formEn, formBoy);
+            if(switch1 == 1)
+            {
+                    pDoc.DefaultPageSettings.PaperSize = CalculatePaperSize(formEn, formBoy);
+            }
         }
 
         // Print Fonksionu
@@ -144,10 +148,24 @@ namespace Wantto_Fatura
             // ben genelde point kullanmaktan yana degilimdir gerci
             // bu yuzden tanimlamayi pointsiz yapalim.
 
+            int formEn = 0, formBoy = 0, Switch1 = 0;
+            cmd = new OleDbCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT formBoy, formEn, customForm FROM Form";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                formBoy = Convert.ToInt32(dr[0]) * 10;
+                formEn = Convert.ToInt32(dr[1]) * 10;
+                Switch1 = Convert.ToInt32(dr[2]);
+            }
+            dr.Close();
+
             if (File.Exists(@"IMG.jpg") == true)
             {
                 Image aImg = Image.FromFile(@"IMG.jpg");
-                e.Graphics.DrawImage(aImg, 0, 0, 200, 280);
+                if(Switch1 == 1) e.Graphics.DrawImage(aImg, 0, 0, formEn, formBoy);
+                if (Switch1 == 0) e.Graphics.DrawImage(aImg, ((210 - formEn) / 2), 0, formEn, formBoy);
             }
                 
 

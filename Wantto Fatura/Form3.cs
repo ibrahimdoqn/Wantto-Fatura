@@ -54,6 +54,8 @@ namespace Wantto_Fatura
                 textBox22.Text = dr[21].ToString();
                 textBox12.Text = dr[22].ToString();
                 textBox23.Text = dr[23].ToString();
+                if (dr[24].ToString() == "1") checkBox1.Checked = true;
+
             }
             dr.Close();
         }
@@ -61,6 +63,11 @@ namespace Wantto_Fatura
 
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
+            string customForm = "0";
+            if (checkBox1.Checked)
+            {
+                customForm = "1";
+            }
             String vStr1 = "Update Form set SatirAralik =@1," +
             " sayinBaslangic = @2," +
             " detayBaslangic = @3," +
@@ -83,7 +90,8 @@ namespace Wantto_Fatura
             " toplamYandan = @21," +
             " yazileYandan = @22," +
             " formBoy = @23," +
-            " formEn = @24 where ID = 1";
+            " formEn = @24," +
+            "customForm = @25 where ID = 1";
             cmd = new OleDbCommand(vStr1, con);
             cmd.Parameters.AddWithValue("@1", textBox1.Text);
             cmd.Parameters.AddWithValue("@2", textBox2.Text);
@@ -108,6 +116,7 @@ namespace Wantto_Fatura
             cmd.Parameters.AddWithValue("@22", textBox22.Text);
             cmd.Parameters.AddWithValue("@23", textBox12.Text);
             cmd.Parameters.AddWithValue("@24", textBox23.Text);
+            cmd.Parameters.AddWithValue("@24", customForm);
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -341,6 +350,64 @@ namespace Wantto_Fatura
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button46_Click(object sender, EventArgs e)
+        {
+
+            textBox9.Text = (Convert.ToInt32(textBox9.Text) - 1).ToString();
+            textBox8.Text = (Convert.ToInt32(textBox8.Text) - 1).ToString();
+            textBox7.Text = (Convert.ToInt32(textBox7.Text) - 1).ToString();
+            textBox6.Text = (Convert.ToInt32(textBox6.Text) - 1).ToString();
+            textBox3.Text = (Convert.ToInt32(textBox3.Text) - 1).ToString();
+            textBox4.Text = (Convert.ToInt32(textBox4.Text) - 1).ToString();
+            textBox5.Text = (Convert.ToInt32(textBox5.Text) - 1).ToString();
+            textBox2.Text = (Convert.ToInt32(textBox2.Text) - 1).ToString();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox9.Text = (Convert.ToInt32(textBox9.Text) + 1).ToString();
+            textBox8.Text = (Convert.ToInt32(textBox8.Text) + 1).ToString();
+            textBox7.Text = (Convert.ToInt32(textBox7.Text) + 1).ToString();
+            textBox6.Text = (Convert.ToInt32(textBox6.Text) + 1).ToString();
+            textBox3.Text = (Convert.ToInt32(textBox3.Text) + 1).ToString();
+            textBox4.Text = (Convert.ToInt32(textBox4.Text) + 1).ToString();
+            textBox5.Text = (Convert.ToInt32(textBox5.Text) + 1).ToString();
+            textBox2.Text = (Convert.ToInt32(textBox2.Text) + 1).ToString();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox15.Text = (Convert.ToInt32(textBox15.Text) - 1).ToString();
+            textBox18.Text = (Convert.ToInt32(textBox18.Text) - 1).ToString();
+            textBox16.Text = (Convert.ToInt32(textBox16.Text) - 1).ToString();
+            textBox17.Text = (Convert.ToInt32(textBox17.Text) - 1).ToString();
+            textBox10.Text = (Convert.ToInt32(textBox10.Text) - 1).ToString();
+            textBox11.Text = (Convert.ToInt32(textBox11.Text) - 1).ToString();
+            textBox13.Text = (Convert.ToInt32(textBox13.Text) - 1).ToString();
+            textBox14.Text = (Convert.ToInt32(textBox14.Text) - 1).ToString();
+            textBox19.Text = (Convert.ToInt32(textBox19.Text) - 1).ToString();
+            textBox20.Text = (Convert.ToInt32(textBox20.Text) - 1).ToString();
+            textBox21.Text = (Convert.ToInt32(textBox21.Text) - 1).ToString();
+            textBox22.Text = (Convert.ToInt32(textBox22.Text) - 1).ToString();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBox15.Text = (Convert.ToInt32(textBox15.Text) + 1).ToString();
+            textBox18.Text = (Convert.ToInt32(textBox18.Text) + 1).ToString();
+            textBox16.Text = (Convert.ToInt32(textBox16.Text) + 1).ToString();
+            textBox17.Text = (Convert.ToInt32(textBox17.Text) + 1).ToString();
+            textBox15.Text = (Convert.ToInt32(textBox15.Text) + 1).ToString();
+            textBox10.Text = (Convert.ToInt32(textBox10.Text) + 1).ToString();
+            textBox11.Text = (Convert.ToInt32(textBox11.Text) + 1).ToString();
+            textBox13.Text = (Convert.ToInt32(textBox13.Text) + 1).ToString();
+            textBox14.Text = (Convert.ToInt32(textBox14.Text) + 1).ToString();
+            textBox19.Text = (Convert.ToInt32(textBox19.Text) + 1).ToString();
+            textBox20.Text = (Convert.ToInt32(textBox20.Text) + 1).ToString();
+            textBox21.Text = (Convert.ToInt32(textBox21.Text) + 1).ToString();
+            textBox22.Text = (Convert.ToInt32(textBox22.Text) + 1).ToString();
         }
     }
 
