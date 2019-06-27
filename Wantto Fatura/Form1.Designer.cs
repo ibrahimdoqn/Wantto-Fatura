@@ -29,9 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
+            this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.serviceController1 = new System.ServiceProcess.ServiceController();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -148,8 +158,6 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -166,7 +174,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menüToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formAyarlarıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -174,13 +181,10 @@
             this.temizleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yazdırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.serviceController1 = new System.ServiceProcess.ServiceController();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.sayfaÖnizlemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yazdırToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -197,12 +201,65 @@
             this.groupBox11.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // BottomToolStripPanel
+            // 
+            this.BottomToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.BottomToolStripPanel.Name = "BottomToolStripPanel";
+            this.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.BottomToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.BottomToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // TopToolStripPanel
+            // 
+            this.TopToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopToolStripPanel.Name = "TopToolStripPanel";
+            this.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.TopToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.TopToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // RightToolStripPanel
+            // 
+            this.RightToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.RightToolStripPanel.Name = "RightToolStripPanel";
+            this.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.RightToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.RightToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // LeftToolStripPanel
+            // 
+            this.LeftToolStripPanel.Location = new System.Drawing.Point(0, 0);
+            this.LeftToolStripPanel.Name = "LeftToolStripPanel";
+            this.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.LeftToolStripPanel.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.LeftToolStripPanel.Size = new System.Drawing.Size(0, 0);
+            // 
+            // ContentPanel
+            // 
+            this.ContentPanel.Size = new System.Drawing.Size(150, 150);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Text = "Baskı önizleme";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // tabControl1
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -211,19 +268,36 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(576, 651);
+            this.tabControl1.Size = new System.Drawing.Size(580, 651);
             this.tabControl1.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menüToolStripMenuItem,
+            this.temizleToolStripMenuItem,
+            this.kayıtToolStripMenuItem,
+            this.yazdırToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(580, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.BackgroundImage = global::Fatura.Properties.Resources.Funny_Only_Hd_Wallpaper_Fu_744x1392PX_Wallpaper_My_Iphone_Is_Blurry;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(568, 622);
+            this.tabPage1.Size = new System.Drawing.Size(572, 625);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ana Sayfa";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -307,8 +381,9 @@
             this.groupBox5.Controls.Add(this.C8);
             this.groupBox5.Controls.Add(this.M8);
             this.groupBox5.Controls.Add(this.B8);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox5.Location = new System.Drawing.Point(8, 122);
+            this.groupBox5.Location = new System.Drawing.Point(10, 122);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(550, 459);
             this.groupBox5.TabIndex = 154;
@@ -339,6 +414,7 @@
             // 
             // M1
             // 
+            this.M1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M1.Location = new System.Drawing.Point(312, 32);
             this.M1.Name = "M1";
             this.M1.Size = new System.Drawing.Size(35, 20);
@@ -348,6 +424,7 @@
             // 
             // B1
             // 
+            this.B1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B1.Location = new System.Drawing.Point(355, 32);
             this.B1.Name = "B1";
             this.B1.Size = new System.Drawing.Size(35, 20);
@@ -355,6 +432,7 @@
             // 
             // yazile
             // 
+            this.yazile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.yazile.Enabled = false;
             this.yazile.Location = new System.Drawing.Point(55, 422);
             this.yazile.Name = "yazile";
@@ -408,6 +486,7 @@
             // 
             // C1
             // 
+            this.C1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C1.Location = new System.Drawing.Point(12, 32);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(294, 20);
@@ -415,6 +494,7 @@
             // 
             // toplam
             // 
+            this.toplam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toplam.Enabled = false;
             this.toplam.Location = new System.Drawing.Point(432, 422);
             this.toplam.Name = "toplam";
@@ -424,6 +504,7 @@
             // 
             // F1
             // 
+            this.F1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F1.Location = new System.Drawing.Point(396, 32);
             this.F1.Name = "F1";
             this.F1.Size = new System.Drawing.Size(54, 20);
@@ -433,6 +514,7 @@
             // 
             // kdv
             // 
+            this.kdv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.kdv.Enabled = false;
             this.kdv.Location = new System.Drawing.Point(432, 396);
             this.kdv.Name = "kdv";
@@ -442,6 +524,7 @@
             // 
             // T1
             // 
+            this.T1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T1.Enabled = false;
             this.T1.Location = new System.Drawing.Point(456, 32);
             this.T1.Name = "T1";
@@ -462,6 +545,7 @@
             // 
             // M2
             // 
+            this.M2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M2.Location = new System.Drawing.Point(312, 58);
             this.M2.Name = "M2";
             this.M2.Size = new System.Drawing.Size(35, 20);
@@ -471,6 +555,7 @@
             // 
             // yekun
             // 
+            this.yekun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.yekun.Enabled = false;
             this.yekun.Location = new System.Drawing.Point(432, 370);
             this.yekun.Name = "yekun";
@@ -480,6 +565,7 @@
             // 
             // B2
             // 
+            this.B2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B2.Location = new System.Drawing.Point(355, 58);
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(35, 20);
@@ -498,6 +584,7 @@
             // 
             // C2
             // 
+            this.C2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C2.Location = new System.Drawing.Point(12, 58);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(294, 20);
@@ -505,6 +592,7 @@
             // 
             // T13
             // 
+            this.T13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T13.Enabled = false;
             this.T13.Location = new System.Drawing.Point(456, 344);
             this.T13.Name = "T13";
@@ -514,6 +602,7 @@
             // 
             // F2
             // 
+            this.F2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F2.Location = new System.Drawing.Point(396, 58);
             this.F2.Name = "F2";
             this.F2.Size = new System.Drawing.Size(54, 20);
@@ -523,6 +612,7 @@
             // 
             // F13
             // 
+            this.F13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F13.Location = new System.Drawing.Point(396, 344);
             this.F13.Name = "F13";
             this.F13.Size = new System.Drawing.Size(54, 20);
@@ -532,6 +622,7 @@
             // 
             // T2
             // 
+            this.T2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T2.Enabled = false;
             this.T2.Location = new System.Drawing.Point(456, 58);
             this.T2.Name = "T2";
@@ -541,6 +632,7 @@
             // 
             // C13
             // 
+            this.C13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C13.Location = new System.Drawing.Point(12, 344);
             this.C13.Name = "C13";
             this.C13.Size = new System.Drawing.Size(294, 20);
@@ -548,6 +640,7 @@
             // 
             // M3
             // 
+            this.M3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M3.Location = new System.Drawing.Point(312, 84);
             this.M3.Name = "M3";
             this.M3.Size = new System.Drawing.Size(35, 20);
@@ -557,6 +650,7 @@
             // 
             // B13
             // 
+            this.B13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B13.Location = new System.Drawing.Point(355, 344);
             this.B13.Name = "B13";
             this.B13.Size = new System.Drawing.Size(35, 20);
@@ -564,6 +658,7 @@
             // 
             // B3
             // 
+            this.B3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B3.Location = new System.Drawing.Point(355, 84);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(35, 20);
@@ -571,6 +666,7 @@
             // 
             // M13
             // 
+            this.M13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M13.Location = new System.Drawing.Point(312, 344);
             this.M13.Name = "M13";
             this.M13.Size = new System.Drawing.Size(35, 20);
@@ -580,6 +676,7 @@
             // 
             // C3
             // 
+            this.C3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C3.Location = new System.Drawing.Point(12, 84);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(294, 20);
@@ -587,6 +684,7 @@
             // 
             // T12
             // 
+            this.T12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T12.Enabled = false;
             this.T12.Location = new System.Drawing.Point(456, 318);
             this.T12.Name = "T12";
@@ -596,6 +694,7 @@
             // 
             // F3
             // 
+            this.F3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F3.Location = new System.Drawing.Point(396, 84);
             this.F3.Name = "F3";
             this.F3.Size = new System.Drawing.Size(54, 20);
@@ -605,6 +704,7 @@
             // 
             // F12
             // 
+            this.F12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F12.Location = new System.Drawing.Point(396, 318);
             this.F12.Name = "F12";
             this.F12.Size = new System.Drawing.Size(54, 20);
@@ -614,6 +714,7 @@
             // 
             // T3
             // 
+            this.T3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T3.Enabled = false;
             this.T3.Location = new System.Drawing.Point(456, 84);
             this.T3.Name = "T3";
@@ -623,6 +724,7 @@
             // 
             // C12
             // 
+            this.C12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C12.Location = new System.Drawing.Point(12, 318);
             this.C12.Name = "C12";
             this.C12.Size = new System.Drawing.Size(294, 20);
@@ -630,6 +732,7 @@
             // 
             // M4
             // 
+            this.M4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M4.Location = new System.Drawing.Point(312, 110);
             this.M4.Name = "M4";
             this.M4.Size = new System.Drawing.Size(35, 20);
@@ -639,6 +742,7 @@
             // 
             // B12
             // 
+            this.B12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B12.Location = new System.Drawing.Point(355, 318);
             this.B12.Name = "B12";
             this.B12.Size = new System.Drawing.Size(35, 20);
@@ -646,6 +750,7 @@
             // 
             // B4
             // 
+            this.B4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B4.Location = new System.Drawing.Point(355, 110);
             this.B4.Name = "B4";
             this.B4.Size = new System.Drawing.Size(35, 20);
@@ -653,6 +758,7 @@
             // 
             // M12
             // 
+            this.M12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M12.Location = new System.Drawing.Point(312, 318);
             this.M12.Name = "M12";
             this.M12.Size = new System.Drawing.Size(35, 20);
@@ -662,6 +768,7 @@
             // 
             // C4
             // 
+            this.C4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C4.Location = new System.Drawing.Point(12, 110);
             this.C4.Name = "C4";
             this.C4.Size = new System.Drawing.Size(294, 20);
@@ -669,6 +776,7 @@
             // 
             // T11
             // 
+            this.T11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T11.Enabled = false;
             this.T11.Location = new System.Drawing.Point(456, 292);
             this.T11.Name = "T11";
@@ -678,6 +786,7 @@
             // 
             // F4
             // 
+            this.F4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F4.Location = new System.Drawing.Point(396, 110);
             this.F4.Name = "F4";
             this.F4.Size = new System.Drawing.Size(54, 20);
@@ -687,6 +796,7 @@
             // 
             // F11
             // 
+            this.F11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F11.Location = new System.Drawing.Point(396, 292);
             this.F11.Name = "F11";
             this.F11.Size = new System.Drawing.Size(54, 20);
@@ -696,6 +806,7 @@
             // 
             // T4
             // 
+            this.T4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T4.Enabled = false;
             this.T4.Location = new System.Drawing.Point(456, 110);
             this.T4.Name = "T4";
@@ -705,6 +816,7 @@
             // 
             // C11
             // 
+            this.C11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C11.Location = new System.Drawing.Point(12, 292);
             this.C11.Name = "C11";
             this.C11.Size = new System.Drawing.Size(294, 20);
@@ -712,6 +824,7 @@
             // 
             // M5
             // 
+            this.M5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M5.Location = new System.Drawing.Point(312, 136);
             this.M5.Name = "M5";
             this.M5.Size = new System.Drawing.Size(35, 20);
@@ -721,6 +834,7 @@
             // 
             // B11
             // 
+            this.B11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B11.Location = new System.Drawing.Point(355, 292);
             this.B11.Name = "B11";
             this.B11.Size = new System.Drawing.Size(35, 20);
@@ -728,6 +842,7 @@
             // 
             // B5
             // 
+            this.B5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B5.Location = new System.Drawing.Point(355, 136);
             this.B5.Name = "B5";
             this.B5.Size = new System.Drawing.Size(35, 20);
@@ -735,6 +850,7 @@
             // 
             // M11
             // 
+            this.M11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M11.Location = new System.Drawing.Point(312, 292);
             this.M11.Name = "M11";
             this.M11.Size = new System.Drawing.Size(35, 20);
@@ -744,6 +860,7 @@
             // 
             // C5
             // 
+            this.C5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C5.Location = new System.Drawing.Point(12, 136);
             this.C5.Name = "C5";
             this.C5.Size = new System.Drawing.Size(294, 20);
@@ -751,6 +868,7 @@
             // 
             // T10
             // 
+            this.T10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T10.Enabled = false;
             this.T10.Location = new System.Drawing.Point(456, 266);
             this.T10.Name = "T10";
@@ -760,6 +878,7 @@
             // 
             // F5
             // 
+            this.F5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F5.Location = new System.Drawing.Point(396, 136);
             this.F5.Name = "F5";
             this.F5.Size = new System.Drawing.Size(54, 20);
@@ -769,6 +888,7 @@
             // 
             // F10
             // 
+            this.F10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F10.Location = new System.Drawing.Point(396, 266);
             this.F10.Name = "F10";
             this.F10.Size = new System.Drawing.Size(54, 20);
@@ -778,6 +898,7 @@
             // 
             // T5
             // 
+            this.T5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T5.Enabled = false;
             this.T5.Location = new System.Drawing.Point(456, 136);
             this.T5.Name = "T5";
@@ -787,6 +908,7 @@
             // 
             // C10
             // 
+            this.C10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C10.Location = new System.Drawing.Point(12, 266);
             this.C10.Name = "C10";
             this.C10.Size = new System.Drawing.Size(294, 20);
@@ -794,6 +916,7 @@
             // 
             // M6
             // 
+            this.M6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M6.Location = new System.Drawing.Point(312, 162);
             this.M6.Name = "M6";
             this.M6.Size = new System.Drawing.Size(35, 20);
@@ -803,6 +926,7 @@
             // 
             // B10
             // 
+            this.B10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B10.Location = new System.Drawing.Point(355, 266);
             this.B10.Name = "B10";
             this.B10.Size = new System.Drawing.Size(35, 20);
@@ -810,6 +934,7 @@
             // 
             // B6
             // 
+            this.B6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B6.Location = new System.Drawing.Point(355, 162);
             this.B6.Name = "B6";
             this.B6.Size = new System.Drawing.Size(35, 20);
@@ -817,6 +942,7 @@
             // 
             // M10
             // 
+            this.M10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M10.Location = new System.Drawing.Point(312, 266);
             this.M10.Name = "M10";
             this.M10.Size = new System.Drawing.Size(35, 20);
@@ -826,6 +952,7 @@
             // 
             // C6
             // 
+            this.C6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C6.Location = new System.Drawing.Point(12, 162);
             this.C6.Name = "C6";
             this.C6.Size = new System.Drawing.Size(294, 20);
@@ -833,6 +960,7 @@
             // 
             // T9
             // 
+            this.T9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T9.Enabled = false;
             this.T9.Location = new System.Drawing.Point(456, 240);
             this.T9.Name = "T9";
@@ -842,6 +970,7 @@
             // 
             // F6
             // 
+            this.F6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F6.Location = new System.Drawing.Point(396, 162);
             this.F6.Name = "F6";
             this.F6.Size = new System.Drawing.Size(54, 20);
@@ -851,6 +980,7 @@
             // 
             // F9
             // 
+            this.F9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F9.Location = new System.Drawing.Point(396, 240);
             this.F9.Name = "F9";
             this.F9.Size = new System.Drawing.Size(54, 20);
@@ -860,6 +990,7 @@
             // 
             // T6
             // 
+            this.T6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T6.Enabled = false;
             this.T6.Location = new System.Drawing.Point(456, 162);
             this.T6.Name = "T6";
@@ -869,6 +1000,7 @@
             // 
             // C9
             // 
+            this.C9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C9.Location = new System.Drawing.Point(12, 240);
             this.C9.Name = "C9";
             this.C9.Size = new System.Drawing.Size(294, 20);
@@ -876,6 +1008,7 @@
             // 
             // M7
             // 
+            this.M7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M7.Location = new System.Drawing.Point(312, 188);
             this.M7.Name = "M7";
             this.M7.Size = new System.Drawing.Size(35, 20);
@@ -885,6 +1018,7 @@
             // 
             // B9
             // 
+            this.B9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B9.Location = new System.Drawing.Point(355, 240);
             this.B9.Name = "B9";
             this.B9.Size = new System.Drawing.Size(35, 20);
@@ -892,6 +1026,7 @@
             // 
             // B7
             // 
+            this.B7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B7.Location = new System.Drawing.Point(355, 188);
             this.B7.Name = "B7";
             this.B7.Size = new System.Drawing.Size(35, 20);
@@ -899,6 +1034,7 @@
             // 
             // M9
             // 
+            this.M9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M9.Location = new System.Drawing.Point(312, 240);
             this.M9.Name = "M9";
             this.M9.Size = new System.Drawing.Size(35, 20);
@@ -908,6 +1044,7 @@
             // 
             // C7
             // 
+            this.C7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C7.Location = new System.Drawing.Point(12, 188);
             this.C7.Name = "C7";
             this.C7.Size = new System.Drawing.Size(294, 20);
@@ -915,6 +1052,7 @@
             // 
             // T8
             // 
+            this.T8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T8.Enabled = false;
             this.T8.Location = new System.Drawing.Point(456, 214);
             this.T8.Name = "T8";
@@ -924,6 +1062,7 @@
             // 
             // F7
             // 
+            this.F7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F7.Location = new System.Drawing.Point(396, 188);
             this.F7.Name = "F7";
             this.F7.Size = new System.Drawing.Size(54, 20);
@@ -933,6 +1072,7 @@
             // 
             // F8
             // 
+            this.F8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.F8.Location = new System.Drawing.Point(396, 214);
             this.F8.Name = "F8";
             this.F8.Size = new System.Drawing.Size(54, 20);
@@ -942,6 +1082,7 @@
             // 
             // T7
             // 
+            this.T7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.T7.Enabled = false;
             this.T7.Location = new System.Drawing.Point(456, 188);
             this.T7.Name = "T7";
@@ -951,6 +1092,7 @@
             // 
             // C8
             // 
+            this.C8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.C8.Location = new System.Drawing.Point(12, 214);
             this.C8.Name = "C8";
             this.C8.Size = new System.Drawing.Size(294, 20);
@@ -958,6 +1100,7 @@
             // 
             // M8
             // 
+            this.M8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.M8.Location = new System.Drawing.Point(312, 214);
             this.M8.Name = "M8";
             this.M8.Size = new System.Drawing.Size(35, 20);
@@ -967,6 +1110,7 @@
             // 
             // B8
             // 
+            this.B8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.B8.Location = new System.Drawing.Point(355, 214);
             this.B8.Name = "B8";
             this.B8.Size = new System.Drawing.Size(35, 20);
@@ -989,8 +1133,9 @@
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.comboKDV1);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Location = new System.Drawing.Point(8, 6);
+            this.groupBox4.Location = new System.Drawing.Point(10, 6);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(550, 110);
             this.groupBox4.TabIndex = 153;
@@ -1010,6 +1155,7 @@
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePicker3.Location = new System.Drawing.Point(251, 82);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(175, 20);
@@ -1018,6 +1164,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Location = new System.Drawing.Point(8, 30);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(226, 20);
@@ -1025,6 +1172,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(8, 56);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(226, 20);
@@ -1032,6 +1180,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Location = new System.Drawing.Point(8, 82);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(226, 20);
@@ -1039,6 +1188,7 @@
             // 
             // f_no
             // 
+            this.f_no.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.f_no.Location = new System.Drawing.Point(240, 30);
             this.f_no.Name = "f_no";
             this.f_no.Size = new System.Drawing.Size(82, 20);
@@ -1057,6 +1207,7 @@
             // 
             // vd1
             // 
+            this.vd1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vd1.Location = new System.Drawing.Point(328, 30);
             this.vd1.Name = "vd1";
             this.vd1.Size = new System.Drawing.Size(100, 20);
@@ -1075,6 +1226,7 @@
             // 
             // vd2
             // 
+            this.vd2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vd2.Location = new System.Drawing.Point(434, 30);
             this.vd2.Name = "vd2";
             this.vd2.Size = new System.Drawing.Size(102, 20);
@@ -1143,21 +1295,26 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tabPage2.BackgroundImage = global::Fatura.Properties.Resources.Funny_Only_Hd_Wallpaper_Fu_744x1392PX_Wallpaper_My_Iphone_Is_Blurry;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(568, 622);
+            this.tabPage2.Size = new System.Drawing.Size(572, 625);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Firmalar";
             // 
             // groupBox6
             // 
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
             this.groupBox6.Controls.Add(this.groupBox9);
             this.groupBox6.Controls.Add(this.groupBox8);
             this.groupBox6.Controls.Add(this.groupBox7);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox6.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox6.Location = new System.Drawing.Point(8, 498);
             this.groupBox6.Name = "groupBox6";
@@ -1217,6 +1374,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Location = new System.Drawing.Point(6, 18);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(232, 20);
@@ -1224,6 +1382,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Location = new System.Drawing.Point(6, 44);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(232, 20);
@@ -1231,6 +1390,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.Location = new System.Drawing.Point(6, 70);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(232, 20);
@@ -1252,6 +1412,7 @@
             // 
             // textBox10
             // 
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox10.Location = new System.Drawing.Point(153, 27);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(115, 20);
@@ -1259,6 +1420,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox9.Location = new System.Drawing.Point(10, 27);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(137, 20);
@@ -1288,9 +1450,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(8, 439);
             this.groupBox2.Name = "groupBox2";
@@ -1301,7 +1465,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.Location = new System.Drawing.Point(364, 15);
@@ -1326,6 +1490,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Location = new System.Drawing.Point(6, 19);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(329, 20);
@@ -1338,7 +1503,7 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(2, 2);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1349,20 +1514,23 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tabPage3.BackgroundImage = global::Fatura.Properties.Resources.Funny_Only_Hd_Wallpaper_Fu_744x1392PX_Wallpaper_My_Iphone_Is_Blurry;
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.groupBox10);
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(568, 622);
+            this.tabPage3.Size = new System.Drawing.Size(572, 625);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Faturalar";
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.label20);
-            this.groupBox10.Controls.Add(this.label19);
+            this.groupBox10.BackColor = System.Drawing.Color.Transparent;
             this.groupBox10.Controls.Add(this.label17);
+            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox10.Location = new System.Drawing.Point(3, 406);
             this.groupBox10.Name = "groupBox10";
@@ -1371,41 +1539,26 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Listelenmiş Faturaların Raporu";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(369, 20);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(41, 13);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "label20";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(240, 20);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(41, 13);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "label19";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(109, 20);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Location = new System.Drawing.Point(64, 20);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.Size = new System.Drawing.Size(48, 13);
             this.label17.TabIndex = 0;
             this.label17.Text = "label17";
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.groupBox11);
             this.groupBox3.Controls.Add(this.button8);
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox3.Location = new System.Drawing.Point(3, 453);
             this.groupBox3.Name = "groupBox3";
@@ -1416,6 +1569,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.BackColor = System.Drawing.Color.Transparent;
             this.groupBox11.Controls.Add(this.dateTimePicker1);
             this.groupBox11.Controls.Add(this.dateTimePicker2);
             this.groupBox11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1482,6 +1636,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
@@ -1493,6 +1648,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Location = new System.Drawing.Point(438, 47);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(107, 20);
@@ -1506,7 +1662,7 @@
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(70, 47);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(74, 17);
+            this.checkBox2.Size = new System.Drawing.Size(82, 17);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Ödenmedi";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -1519,7 +1675,7 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(11, 47);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(60, 17);
+            this.checkBox1.Size = new System.Drawing.Size(66, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Ödendi";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -1565,12 +1721,12 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 2);
@@ -1581,32 +1737,21 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menüToolStripMenuItem,
-            this.temizleToolStripMenuItem,
-            this.kayıtToolStripMenuItem,
-            this.yazdırToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(576, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // menüToolStripMenuItem
             // 
             this.menüToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hakkındaToolStripMenuItem,
             this.formAyarlarıToolStripMenuItem,
             this.çıkışToolStripMenuItem});
+            this.menüToolStripMenuItem.Image = global::Fatura.Properties.Resources._588a64f5d06f6719692a2d13;
             this.menüToolStripMenuItem.Name = "menüToolStripMenuItem";
-            this.menüToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menüToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.menüToolStripMenuItem.Text = "Menü";
             this.menüToolStripMenuItem.Click += new System.EventHandler(this.menüToolStripMenuItem_Click);
             // 
             // hakkındaToolStripMenuItem
             // 
+            this.hakkındaToolStripMenuItem.Image = global::Fatura.Properties.Resources.indir;
             this.hakkındaToolStripMenuItem.Name = "hakkındaToolStripMenuItem";
             this.hakkındaToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.hakkındaToolStripMenuItem.Text = "Hakkında";
@@ -1614,6 +1759,7 @@
             // 
             // formAyarlarıToolStripMenuItem
             // 
+            this.formAyarlarıToolStripMenuItem.Image = global::Fatura.Properties.Resources.ScreamingEagles_Sign_Form_Icon;
             this.formAyarlarıToolStripMenuItem.Name = "formAyarlarıToolStripMenuItem";
             this.formAyarlarıToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.formAyarlarıToolStripMenuItem.Text = "Form Ayarları";
@@ -1621,6 +1767,7 @@
             // 
             // çıkışToolStripMenuItem
             // 
+            this.çıkışToolStripMenuItem.Image = global::Fatura.Properties.Resources.windows_log_off_png_5;
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
             this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
@@ -1628,15 +1775,17 @@
             // 
             // temizleToolStripMenuItem
             // 
+            this.temizleToolStripMenuItem.Image = global::Fatura.Properties.Resources.System_remover;
             this.temizleToolStripMenuItem.Name = "temizleToolStripMenuItem";
-            this.temizleToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.temizleToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.temizleToolStripMenuItem.Text = "Temizle";
             this.temizleToolStripMenuItem.Click += new System.EventHandler(this.temizleToolStripMenuItem_Click);
             // 
             // kayıtToolStripMenuItem
             // 
+            this.kayıtToolStripMenuItem.Image = global::Fatura.Properties.Resources._0___pDURXwwMkQryqt;
             this.kayıtToolStripMenuItem.Name = "kayıtToolStripMenuItem";
-            this.kayıtToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.kayıtToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.kayıtToolStripMenuItem.Text = "Kayıt";
             this.kayıtToolStripMenuItem.Click += new System.EventHandler(this.kayıtToolStripMenuItem_Click);
             // 
@@ -1645,41 +1794,25 @@
             this.yazdırToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sayfaÖnizlemeToolStripMenuItem,
             this.yazdırToolStripMenuItem1});
+            this.yazdırToolStripMenuItem.Image = global::Fatura.Properties.Resources.Print_2_512;
             this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
-            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.yazdırToolStripMenuItem.Text = "Yazdır";
             this.yazdırToolStripMenuItem.Click += new System.EventHandler(this.yazdırToolStripMenuItem_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Text = "Baskı önizleme";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // sayfaÖnizlemeToolStripMenuItem
             // 
+            this.sayfaÖnizlemeToolStripMenuItem.Image = global::Fatura.Properties.Resources.preview_97247;
             this.sayfaÖnizlemeToolStripMenuItem.Name = "sayfaÖnizlemeToolStripMenuItem";
-            this.sayfaÖnizlemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sayfaÖnizlemeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.sayfaÖnizlemeToolStripMenuItem.Text = "Sayfa Önizleme";
             this.sayfaÖnizlemeToolStripMenuItem.Click += new System.EventHandler(this.sayfaÖnizlemeToolStripMenuItem_Click);
             // 
             // yazdırToolStripMenuItem1
             // 
+            this.yazdırToolStripMenuItem1.Image = global::Fatura.Properties.Resources.Print_2_512;
             this.yazdırToolStripMenuItem1.Name = "yazdırToolStripMenuItem1";
-            this.yazdırToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.yazdırToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
             this.yazdırToolStripMenuItem1.Text = "Yazdır";
             this.yazdırToolStripMenuItem1.Click += new System.EventHandler(this.yazdırToolStripMenuItem1_Click);
             // 
@@ -1687,18 +1820,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(576, 675);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(580, 675);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Fatura V2.1 - DOGAN YAZILIM";
+            this.Text = "Fatura V2.2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1723,137 +1859,40 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox B1;
-        private System.Windows.Forms.TextBox M1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboKDV1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox vd2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox vd1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox C1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox F1;
-        private System.Windows.Forms.TextBox T1;
-        private System.Windows.Forms.TextBox T13;
-        private System.Windows.Forms.TextBox F13;
-        private System.Windows.Forms.TextBox C13;
-        private System.Windows.Forms.TextBox B13;
-        private System.Windows.Forms.TextBox M13;
-        private System.Windows.Forms.TextBox T12;
-        private System.Windows.Forms.TextBox F12;
-        private System.Windows.Forms.TextBox C12;
-        private System.Windows.Forms.TextBox B12;
-        private System.Windows.Forms.TextBox M12;
-        private System.Windows.Forms.TextBox T11;
-        private System.Windows.Forms.TextBox F11;
-        private System.Windows.Forms.TextBox C11;
-        private System.Windows.Forms.TextBox B11;
-        private System.Windows.Forms.TextBox M11;
-        private System.Windows.Forms.TextBox T10;
-        private System.Windows.Forms.TextBox F10;
-        private System.Windows.Forms.TextBox C10;
-        private System.Windows.Forms.TextBox B10;
-        private System.Windows.Forms.TextBox M10;
-        private System.Windows.Forms.TextBox T9;
-        private System.Windows.Forms.TextBox F9;
-        private System.Windows.Forms.TextBox C9;
-        private System.Windows.Forms.TextBox B9;
-        private System.Windows.Forms.TextBox M9;
-        private System.Windows.Forms.TextBox T8;
-        private System.Windows.Forms.TextBox F8;
-        private System.Windows.Forms.TextBox C8;
-        private System.Windows.Forms.TextBox B8;
-        private System.Windows.Forms.TextBox M8;
-        private System.Windows.Forms.TextBox T7;
-        private System.Windows.Forms.TextBox F7;
-        private System.Windows.Forms.TextBox C7;
-        private System.Windows.Forms.TextBox B7;
-        private System.Windows.Forms.TextBox M7;
-        private System.Windows.Forms.TextBox T6;
-        private System.Windows.Forms.TextBox F6;
-        private System.Windows.Forms.TextBox C6;
-        private System.Windows.Forms.TextBox B6;
-        private System.Windows.Forms.TextBox M6;
-        private System.Windows.Forms.TextBox T5;
-        private System.Windows.Forms.TextBox F5;
-        private System.Windows.Forms.TextBox C5;
-        private System.Windows.Forms.TextBox B5;
-        private System.Windows.Forms.TextBox M5;
-        private System.Windows.Forms.TextBox T4;
-        private System.Windows.Forms.TextBox F4;
-        private System.Windows.Forms.TextBox C4;
-        private System.Windows.Forms.TextBox B4;
-        private System.Windows.Forms.TextBox M4;
-        private System.Windows.Forms.TextBox T3;
-        private System.Windows.Forms.TextBox F3;
-        private System.Windows.Forms.TextBox C3;
-        private System.Windows.Forms.TextBox B3;
-        private System.Windows.Forms.TextBox M3;
-        private System.Windows.Forms.TextBox T2;
-        private System.Windows.Forms.TextBox F2;
-        private System.Windows.Forms.TextBox C2;
-        private System.Windows.Forms.TextBox B2;
-        private System.Windows.Forms.TextBox M2;
-        private System.Windows.Forms.TextBox yazile;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox toplam;
-        private System.Windows.Forms.TextBox kdv;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox yekun;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox f_no;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menüToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.ServiceProcess.ServiceController serviceController1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ToolStripMenuItem kayıtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yazdırToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem temizleToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
+        private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
+        private System.Windows.Forms.ToolStripContentPanel ContentPanel;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.ServiceProcess.ServiceController serviceController1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button button7;
@@ -1867,18 +1906,115 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ToolStripMenuItem formAyarlarıToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox M1;
+        private System.Windows.Forms.TextBox B1;
+        private System.Windows.Forms.TextBox yazile;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox C1;
+        private System.Windows.Forms.TextBox toplam;
+        private System.Windows.Forms.TextBox F1;
+        private System.Windows.Forms.TextBox kdv;
+        private System.Windows.Forms.TextBox T1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox M2;
+        private System.Windows.Forms.TextBox yekun;
+        private System.Windows.Forms.TextBox B2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox C2;
+        private System.Windows.Forms.TextBox T13;
+        private System.Windows.Forms.TextBox F2;
+        private System.Windows.Forms.TextBox F13;
+        private System.Windows.Forms.TextBox T2;
+        private System.Windows.Forms.TextBox C13;
+        private System.Windows.Forms.TextBox M3;
+        private System.Windows.Forms.TextBox B13;
+        private System.Windows.Forms.TextBox B3;
+        private System.Windows.Forms.TextBox M13;
+        private System.Windows.Forms.TextBox C3;
+        private System.Windows.Forms.TextBox T12;
+        private System.Windows.Forms.TextBox F3;
+        private System.Windows.Forms.TextBox F12;
+        private System.Windows.Forms.TextBox T3;
+        private System.Windows.Forms.TextBox C12;
+        private System.Windows.Forms.TextBox M4;
+        private System.Windows.Forms.TextBox B12;
+        private System.Windows.Forms.TextBox B4;
+        private System.Windows.Forms.TextBox M12;
+        private System.Windows.Forms.TextBox C4;
+        private System.Windows.Forms.TextBox T11;
+        private System.Windows.Forms.TextBox F4;
+        private System.Windows.Forms.TextBox F11;
+        private System.Windows.Forms.TextBox T4;
+        private System.Windows.Forms.TextBox C11;
+        private System.Windows.Forms.TextBox M5;
+        private System.Windows.Forms.TextBox B11;
+        private System.Windows.Forms.TextBox B5;
+        private System.Windows.Forms.TextBox M11;
+        private System.Windows.Forms.TextBox C5;
+        private System.Windows.Forms.TextBox T10;
+        private System.Windows.Forms.TextBox F5;
+        private System.Windows.Forms.TextBox F10;
+        private System.Windows.Forms.TextBox T5;
+        private System.Windows.Forms.TextBox C10;
+        private System.Windows.Forms.TextBox M6;
+        private System.Windows.Forms.TextBox B10;
+        private System.Windows.Forms.TextBox B6;
+        private System.Windows.Forms.TextBox M10;
+        private System.Windows.Forms.TextBox C6;
+        private System.Windows.Forms.TextBox T9;
+        private System.Windows.Forms.TextBox F6;
+        private System.Windows.Forms.TextBox F9;
+        private System.Windows.Forms.TextBox T6;
+        private System.Windows.Forms.TextBox C9;
+        private System.Windows.Forms.TextBox M7;
+        private System.Windows.Forms.TextBox B9;
+        private System.Windows.Forms.TextBox B7;
+        private System.Windows.Forms.TextBox M9;
+        private System.Windows.Forms.TextBox C7;
+        private System.Windows.Forms.TextBox T8;
+        private System.Windows.Forms.TextBox F7;
+        private System.Windows.Forms.TextBox F8;
+        private System.Windows.Forms.TextBox T7;
+        private System.Windows.Forms.TextBox C8;
+        private System.Windows.Forms.TextBox M8;
+        private System.Windows.Forms.TextBox B8;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox f_no;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox vd1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox vd2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboKDV1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menüToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hakkındaToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.ToolStripMenuItem formAyarlarıToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem temizleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kayıtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yazdırToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sayfaÖnizlemeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yazdırToolStripMenuItem1;
     }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 
 namespace Wantto_Fatura
@@ -20,9 +21,29 @@ namespace Wantto_Fatura
         OleDbConnection con;
         OleDbCommand cmd;
         OleDbDataReader dr;
+        string FileName;
+        private void pictureload()
+        {
+            FileName = "IMG.jpg";
+            try
+            {
+                if (File.Exists("IMG.jpg"))
+                {
+                    pictureBox1.ImageLocation = FileName;
+                    pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("Lütfen geçerli bir resim dosyası yükleyin...");
+                File.Delete("IMG.jpg");
+            }
+        }
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            pictureload();
             con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=Database1.accdb");
             con.Open();
             cmd = new OleDbCommand();
@@ -408,6 +429,85 @@ namespace Wantto_Fatura
             textBox20.Text = (Convert.ToInt32(textBox20.Text) + 1).ToString();
             textBox21.Text = (Convert.ToInt32(textBox21.Text) + 1).ToString();
             textBox22.Text = (Convert.ToInt32(textBox22.Text) + 1).ToString();
+        }
+
+        private void button47_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog(); 
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                FileName = file.FileName;
+            }
+            File.Copy(FileName, (Application.StartupPath + @"\IMG.jpg"),true);
+            pictureload();
+        }
+
+        private void button48_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("IMG.jpg"))
+            {
+                File.Delete("IMG.jpg");
+            }
+            pictureload();
+        }
+
+        private void Kayıt_Click(object sender, EventArgs e)
+        {
+            string customForm = "0";
+            if (checkBox1.Checked)
+            {
+                customForm = "1";
+            }
+            String vStr1 = "Update Form set SatirAralik =@1," +
+            " sayinBaslangic = @2," +
+            " detayBaslangic = @3," +
+            " vdBaslangic = @4," +
+            " tarihBaslangic = @5," +
+            " yekunBaslangıc = @6," +
+            " kdvBaslangıc = @7," +
+            " toplamBaslangic = @8," +
+            " yazileBaslangic = @9," +
+            " cBaslangic = @10," +
+            " mBaslangic = @11," +
+            " fBaslangic = @13," +
+            " tBaslangic = @14," +
+            " sayinYandan = @15," +
+            " vd1Yandan = @16," +
+            " vd2Yandan = @17," +
+            " tarihYandan = @18," +
+            " yekunYandan = @19," +
+            " kdvYandan = @20," +
+            " toplamYandan = @21," +
+            " yazileYandan = @22," +
+            " formBoy = @23," +
+            " formEn = @24," +
+            "customForm = @25 where ID = 1";
+            cmd = new OleDbCommand(vStr1, con);
+            cmd.Parameters.AddWithValue("@1", textBox1.Text);
+            cmd.Parameters.AddWithValue("@2", textBox2.Text);
+            cmd.Parameters.AddWithValue("@3", textBox3.Text);
+            cmd.Parameters.AddWithValue("@4", textBox4.Text);
+            cmd.Parameters.AddWithValue("@5", textBox5.Text);
+            cmd.Parameters.AddWithValue("@6", textBox6.Text);
+            cmd.Parameters.AddWithValue("@7", textBox7.Text);
+            cmd.Parameters.AddWithValue("@8", textBox8.Text);
+            cmd.Parameters.AddWithValue("@9", textBox9.Text);
+            cmd.Parameters.AddWithValue("@10", textBox10.Text);
+            cmd.Parameters.AddWithValue("@11", textBox11.Text);
+            cmd.Parameters.AddWithValue("@13", textBox13.Text);
+            cmd.Parameters.AddWithValue("@14", textBox14.Text);
+            cmd.Parameters.AddWithValue("@15", textBox15.Text);
+            cmd.Parameters.AddWithValue("@16", textBox16.Text);
+            cmd.Parameters.AddWithValue("@17", textBox17.Text);
+            cmd.Parameters.AddWithValue("@18", textBox18.Text);
+            cmd.Parameters.AddWithValue("@19", textBox19.Text);
+            cmd.Parameters.AddWithValue("@20", textBox20.Text);
+            cmd.Parameters.AddWithValue("@21", textBox21.Text);
+            cmd.Parameters.AddWithValue("@22", textBox22.Text);
+            cmd.Parameters.AddWithValue("@23", textBox12.Text);
+            cmd.Parameters.AddWithValue("@24", textBox23.Text);
+            cmd.Parameters.AddWithValue("@24", customForm);
+            cmd.ExecuteNonQuery();
         }
     }
 

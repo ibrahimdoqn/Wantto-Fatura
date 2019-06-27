@@ -68,6 +68,18 @@ namespace Wantto_Fatura
             }
         }
 
+        private void yazdir()
+        {
+            printingCode();
+            printDialog1.Document = pDoc;
+            DialogResult yazdirmaIslemi;
+            yazdirmaIslemi = printDialog1.ShowDialog();
+            if (yazdirmaIslemi == DialogResult.OK)
+            {
+                pDoc.Print();
+            }
+        }
+
         // Print Fonksionu
         void pDoc_PrintPage(object sender, PrintPageEventArgs e)
         {
@@ -364,6 +376,7 @@ namespace Wantto_Fatura
                 vStr3 = vStr3 + " AND Fatura_No like '" + textBox4.Text + "%'";
             }
 
+
             //Datagrid'i doldurur
             da = new OleDbDataAdapter(vStr, con);
             da.SelectCommand.Parameters.AddWithValue("tr1", vFDate);
@@ -372,6 +385,7 @@ namespace Wantto_Fatura
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
+            string st1="", st2="", st3="";
             //Toplam KDV'yi hesaplar
             cmd = new OleDbCommand(vStr1, con);
             cmd.Parameters.AddWithValue("@FD", vFDate);
@@ -379,7 +393,7 @@ namespace Wantto_Fatura
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                label17.Text = "Toplam KDV: " + dr[0].ToString() + " TL";
+                st1 = "Toplam KDV: " + dr[0].ToString() + " TL";
             }
             dr.Close();
 
@@ -390,7 +404,7 @@ namespace Wantto_Fatura
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                label19.Text = "Aratoplam: " + dr[0].ToString() + " TL";
+                st2 = "Aratoplam: " + dr[0].ToString() + " TL";
             }
             dr.Close();
 
@@ -401,10 +415,10 @@ namespace Wantto_Fatura
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                label20.Text = "Toplam: " + dr[0].ToString() + " TL";
+                st3 = "Toplam: " + dr[0].ToString() + " TL";
             }
             dr.Close();
-
+            label17.Text = st1 + "  " + st2 + "  " + st3;
         }
 
         private void musteri()
@@ -1714,14 +1728,7 @@ namespace Wantto_Fatura
 
         private void yazdırToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            printingCode();
-            printDialog1.Document = pDoc;
-            DialogResult yazdirmaIslemi;
-            yazdirmaIslemi = printDialog1.ShowDialog();
-            if (yazdirmaIslemi == DialogResult.OK)
-            {
-                pDoc.Print();
-            }
+            yazdir();
         }
 
         private void sayfaÖnizlemeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1729,5 +1736,6 @@ namespace Wantto_Fatura
             printingCode();
             fyazdir();
         }
+
     }
 }

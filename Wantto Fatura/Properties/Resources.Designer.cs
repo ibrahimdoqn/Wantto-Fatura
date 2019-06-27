@@ -63,9 +63,79 @@ namespace Fatura.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _0___pDURXwwMkQryqt {
+            get {
+                object obj = ResourceManager.GetObject("0_-_pDURXwwMkQryqt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1006px_PictureBox_logo_svg {
+            get {
+                object obj = ResourceManager.GetObject("1006px-PictureBox_logo.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _18462 {
+            get {
+                object obj = ResourceManager.GetObject("18462", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _55443367_save_floppy_disk_icon_green_square_button {
+            get {
+                object obj = ResourceManager.GetObject("55443367-save-floppy-disk-icon-green-square-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _588a64f5d06f6719692a2d13 {
+            get {
+                object obj = ResourceManager.GetObject("588a64f5d06f6719692a2d13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _588a64f5d06f6719692a2d131 {
+            get {
+                object obj = ResourceManager.GetObject("588a64f5d06f6719692a2d131", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap aşağı {
             get {
                 object obj = ResourceManager.GetObject("aşağı", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Funny_Only_Hd_Wallpaper_Fu_744x1392PX_Wallpaper_My_Iphone_Is_Blurry {
+            get {
+                object obj = ResourceManager.GetObject("Funny Only Hd Wallpaper Fu 744x1392PX Wallpaper My Iphone Is Blurry", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +183,46 @@ namespace Fatura.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap indir {
+            get {
+                object obj = ResourceManager.GetObject("indir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap papers_co_sa08_blue_sky_blue_blur_40_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("papers.co-sa08-blue-sky-blue-blur-40-wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap preview_97247 {
+            get {
+                object obj = ResourceManager.GetObject("preview_97247", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Print_2_512 {
+            get {
+                object obj = ResourceManager.GetObject("Print-2-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap sağ {
             get {
                 object obj = ResourceManager.GetObject("sağ", resourceCulture);
@@ -123,9 +233,49 @@ namespace Fatura.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap ScreamingEagles_Sign_Form_Icon {
+            get {
+                object obj = ResourceManager.GetObject("ScreamingEagles-Sign-Form-Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap sol {
             get {
                 object obj = ResourceManager.GetObject("sol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap System_remover {
+            get {
+                object obj = ResourceManager.GetObject("System-remover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallpaper_blue_blue_sky_blur_750x1334 {
+            get {
+                object obj = ResourceManager.GetObject("wallpaper-blue-blue-sky-blur-750x1334", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap windows_log_off_png_5 {
+            get {
+                object obj = ResourceManager.GetObject("windows-log-off-png-5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
