@@ -57,59 +57,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button44 = new System.Windows.Forms.Button();
+            this.button45 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button48 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.Kayıt = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button46 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button43 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -120,12 +75,57 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
-            this.button45 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button43 = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button46 = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button47 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.Kayıt = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -139,8 +139,8 @@
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -357,6 +357,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Satır Aralığı";
             // 
+            // button44
+            // 
+            this.button44.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button44.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button44.Location = new System.Drawing.Point(53, 27);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(20, 20);
+            this.button44.TabIndex = 85;
+            this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.button44_Click);
+            // 
+            // button45
+            // 
+            this.button45.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button45.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button45.Location = new System.Drawing.Point(74, 27);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(20, 20);
+            this.button45.TabIndex = 84;
+            this.button45.UseVisualStyleBackColor = true;
+            this.button45.Click += new System.EventHandler(this.button45_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
@@ -373,6 +395,50 @@
             this.groupBox2.TabIndex = 87;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sayın";
+            // 
+            // button15
+            // 
+            this.button15.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.Location = new System.Drawing.Point(55, 38);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(20, 20);
+            this.button15.TabIndex = 54;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button14
+            // 
+            this.button14.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.Location = new System.Drawing.Point(75, 38);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(20, 20);
+            this.button14.TabIndex = 55;
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button31
+            // 
+            this.button31.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button31.Location = new System.Drawing.Point(26, 13);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(20, 21);
+            this.button31.TabIndex = 70;
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
+            // 
+            // button30
+            // 
+            this.button30.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button30.Location = new System.Drawing.Point(6, 13);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(20, 21);
+            this.button30.TabIndex = 71;
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // groupBox3
             // 
@@ -402,584 +468,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cinsi - Miktarı - Birim - Fiyatı - Tutarı";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textBox9);
-            this.groupBox4.Controls.Add(this.button43);
-            this.groupBox4.Controls.Add(this.button42);
-            this.groupBox4.Controls.Add(this.textBox22);
-            this.groupBox4.Controls.Add(this.button29);
-            this.groupBox4.Controls.Add(this.button28);
-            this.groupBox4.Location = new System.Drawing.Point(355, 203);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(108, 74);
-            this.groupBox4.TabIndex = 89;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Yazı ile";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox7);
-            this.groupBox5.Controls.Add(this.button39);
-            this.groupBox5.Controls.Add(this.button38);
-            this.groupBox5.Controls.Add(this.textBox20);
-            this.groupBox5.Controls.Add(this.button25);
-            this.groupBox5.Controls.Add(this.button24);
-            this.groupBox5.Location = new System.Drawing.Point(135, 203);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(103, 74);
-            this.groupBox5.TabIndex = 90;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "KDV";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox8);
-            this.groupBox6.Controls.Add(this.button41);
-            this.groupBox6.Controls.Add(this.button40);
-            this.groupBox6.Controls.Add(this.textBox21);
-            this.groupBox6.Controls.Add(this.button27);
-            this.groupBox6.Controls.Add(this.button26);
-            this.groupBox6.Location = new System.Drawing.Point(246, 203);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(103, 74);
-            this.groupBox6.TabIndex = 91;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Toplam";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.textBox4);
-            this.groupBox7.Controls.Add(this.button32);
-            this.groupBox7.Controls.Add(this.button33);
-            this.groupBox7.Controls.Add(this.button19);
-            this.groupBox7.Controls.Add(this.textBox16);
-            this.groupBox7.Controls.Add(this.textBox17);
-            this.groupBox7.Controls.Add(this.label11);
-            this.groupBox7.Controls.Add(this.label12);
-            this.groupBox7.Controls.Add(this.button17);
-            this.groupBox7.Controls.Add(this.button16);
-            this.groupBox7.Controls.Add(this.button18);
-            this.groupBox7.Location = new System.Drawing.Point(333, 28);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(142, 77);
-            this.groupBox7.TabIndex = 92;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Vergi Dairesi No";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.textBox18);
-            this.groupBox8.Controls.Add(this.button21);
-            this.groupBox8.Controls.Add(this.button20);
-            this.groupBox8.Controls.Add(this.textBox5);
-            this.groupBox8.Controls.Add(this.button35);
-            this.groupBox8.Controls.Add(this.button34);
-            this.groupBox8.Location = new System.Drawing.Point(119, 31);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(101, 67);
-            this.groupBox8.TabIndex = 93;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Tarih";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.textBox19);
-            this.groupBox9.Controls.Add(this.button23);
-            this.groupBox9.Controls.Add(this.button22);
-            this.groupBox9.Controls.Add(this.textBox6);
-            this.groupBox9.Controls.Add(this.button37);
-            this.groupBox9.Controls.Add(this.button36);
-            this.groupBox9.Location = new System.Drawing.Point(22, 203);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(103, 74);
-            this.groupBox9.TabIndex = 94;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Yekun";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.checkBox1);
-            this.groupBox10.Controls.Add(this.label2);
-            this.groupBox10.Controls.Add(this.label1);
-            this.groupBox10.Controls.Add(this.textBox23);
-            this.groupBox10.Controls.Add(this.textBox12);
-            this.groupBox10.Location = new System.Drawing.Point(67, 284);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(382, 51);
-            this.groupBox10.TabIndex = 95;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Kağıt Boyutu";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(293, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(73, 17);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Özel Form";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "En";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Boy";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(180, 19);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 20);
-            this.textBox23.TabIndex = 1;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(42, 19);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 0;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.button1);
-            this.groupBox11.Controls.Add(this.button8);
-            this.groupBox11.Controls.Add(this.button9);
-            this.groupBox11.Controls.Add(this.button46);
-            this.groupBox11.Location = new System.Drawing.Point(67, 341);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(382, 54);
-            this.groupBox11.TabIndex = 96;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Kenar Boşluklarını Düzelt";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.richTextBox1);
-            this.groupBox12.Controls.Add(this.label3);
-            this.groupBox12.Controls.Add(this.button48);
-            this.groupBox12.Controls.Add(this.button47);
-            this.groupBox12.Controls.Add(this.pictureBox1);
-            this.groupBox12.Location = new System.Drawing.Point(67, 401);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(385, 127);
-            this.groupBox12.TabIndex = 97;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Örnek Fatura";
-            // 
-            // button47
-            // 
-            this.button47.Location = new System.Drawing.Point(107, 19);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(75, 23);
-            this.button47.TabIndex = 1;
-            this.button47.Text = "Dosya Seç";
-            this.button47.UseVisualStyleBackColor = true;
-            this.button47.Click += new System.EventHandler(this.button47_Click);
-            // 
-            // button48
-            // 
-            this.button48.Location = new System.Drawing.Point(107, 48);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(75, 23);
-            this.button48.TabIndex = 2;
-            this.button48.Text = "Dosyayı Sil";
-            this.button48.UseVisualStyleBackColor = true;
-            this.button48.Click += new System.EventHandler(this.button48_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(107, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 3;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(110, 77);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(269, 44);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "Bu alan Fatura ön izleme ile kolonları daha basit yerleştirmek için açılmıştır. F" +
-    "atura kolon ayarını yaptıktan sonra lütfen resimi siliniz.";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Kayıt,
-            this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(487, 25);
-            this.toolStrip1.TabIndex = 98;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // Kayıt
-            // 
-            this.Kayıt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Kayıt.Image = global::Fatura.Properties.Resources._0___pDURXwwMkQryqt;
-            this.Kayıt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Kayıt.Name = "Kayıt";
-            this.Kayıt.Size = new System.Drawing.Size(23, 22);
-            this.Kayıt.Text = "Kaydet";
-            this.Kayıt.Click += new System.EventHandler(this.Kayıt_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Fatura.Properties.Resources._1006px_PictureBox_logo_svg;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 102);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(191, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 20);
-            this.button1.TabIndex = 72;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Location = new System.Drawing.Point(211, 20);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(20, 20);
-            this.button8.TabIndex = 73;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Location = new System.Drawing.Point(165, 19);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(20, 21);
-            this.button9.TabIndex = 74;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button46
-            // 
-            this.button46.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button46.Location = new System.Drawing.Point(143, 19);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(20, 21);
-            this.button46.TabIndex = 75;
-            this.button46.UseVisualStyleBackColor = true;
-            this.button46.Click += new System.EventHandler(this.button46_Click);
-            // 
-            // button23
-            // 
-            this.button23.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button23.Location = new System.Drawing.Point(55, 46);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(20, 20);
-            this.button23.TabIndex = 62;
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
-            // 
-            // button22
-            // 
-            this.button22.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button22.Location = new System.Drawing.Point(75, 46);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(20, 20);
-            this.button22.TabIndex = 63;
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
-            // button37
-            // 
-            this.button37.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button37.Location = new System.Drawing.Point(26, 19);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(20, 21);
-            this.button37.TabIndex = 76;
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
-            // 
-            // button36
-            // 
-            this.button36.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button36.Location = new System.Drawing.Point(6, 19);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(20, 21);
-            this.button36.TabIndex = 77;
-            this.button36.UseVisualStyleBackColor = true;
-            this.button36.Click += new System.EventHandler(this.button36_Click);
-            // 
-            // button21
-            // 
-            this.button21.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button21.Location = new System.Drawing.Point(55, 39);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(20, 20);
-            this.button21.TabIndex = 60;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button20
-            // 
-            this.button20.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button20.Location = new System.Drawing.Point(75, 39);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(20, 20);
-            this.button20.TabIndex = 61;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button35
-            // 
-            this.button35.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button35.Location = new System.Drawing.Point(26, 13);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(20, 21);
-            this.button35.TabIndex = 74;
-            this.button35.UseVisualStyleBackColor = true;
-            this.button35.Click += new System.EventHandler(this.button35_Click);
-            // 
-            // button34
-            // 
-            this.button34.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button34.Location = new System.Drawing.Point(6, 13);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(20, 21);
-            this.button34.TabIndex = 75;
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
-            // 
-            // button32
-            // 
-            this.button32.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button32.Location = new System.Drawing.Point(8, 14);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(20, 21);
-            this.button32.TabIndex = 73;
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button32_Click);
-            // 
-            // button33
-            // 
-            this.button33.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button33.Location = new System.Drawing.Point(28, 14);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(20, 21);
-            this.button33.TabIndex = 72;
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
-            // 
-            // button19
-            // 
-            this.button19.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button19.Location = new System.Drawing.Point(99, 55);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(20, 20);
-            this.button19.TabIndex = 58;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button17
-            // 
-            this.button17.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button17.Location = new System.Drawing.Point(99, 35);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(20, 20);
-            this.button17.TabIndex = 56;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // button16
-            // 
-            this.button16.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button16.Location = new System.Drawing.Point(119, 35);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(20, 20);
-            this.button16.TabIndex = 57;
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // button18
-            // 
-            this.button18.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button18.Location = new System.Drawing.Point(119, 55);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(20, 20);
-            this.button18.TabIndex = 59;
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // button41
-            // 
-            this.button41.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button41.Location = new System.Drawing.Point(29, 19);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(20, 21);
-            this.button41.TabIndex = 80;
-            this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
-            // 
-            // button40
-            // 
-            this.button40.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button40.Location = new System.Drawing.Point(9, 19);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(20, 21);
-            this.button40.TabIndex = 81;
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.button40_Click);
-            // 
-            // button27
-            // 
-            this.button27.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button27.Location = new System.Drawing.Point(55, 45);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(20, 20);
-            this.button27.TabIndex = 66;
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // button26
-            // 
-            this.button26.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button26.Location = new System.Drawing.Point(75, 45);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(20, 20);
-            this.button26.TabIndex = 67;
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
-            // 
-            // button39
-            // 
-            this.button39.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button39.Location = new System.Drawing.Point(29, 19);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(20, 21);
-            this.button39.TabIndex = 78;
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.button39_Click);
-            // 
-            // button38
-            // 
-            this.button38.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button38.Location = new System.Drawing.Point(9, 19);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(20, 21);
-            this.button38.TabIndex = 79;
-            this.button38.UseVisualStyleBackColor = true;
-            this.button38.Click += new System.EventHandler(this.button38_Click);
-            // 
-            // button25
-            // 
-            this.button25.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button25.Location = new System.Drawing.Point(55, 44);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(20, 20);
-            this.button25.TabIndex = 64;
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
-            // 
-            // button24
-            // 
-            this.button24.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button24.Location = new System.Drawing.Point(75, 44);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(20, 20);
-            this.button24.TabIndex = 65;
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // button43
-            // 
-            this.button43.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button43.Location = new System.Drawing.Point(29, 15);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(20, 21);
-            this.button43.TabIndex = 82;
-            this.button43.UseVisualStyleBackColor = true;
-            this.button43.Click += new System.EventHandler(this.button43_Click);
-            // 
-            // button42
-            // 
-            this.button42.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button42.Location = new System.Drawing.Point(9, 15);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(20, 21);
-            this.button42.TabIndex = 83;
-            this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
-            // 
-            // button29
-            // 
-            this.button29.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button29.Location = new System.Drawing.Point(54, 42);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(20, 20);
-            this.button29.TabIndex = 68;
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
-            // 
-            // button28
-            // 
-            this.button28.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button28.Location = new System.Drawing.Point(74, 42);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(20, 20);
-            this.button28.TabIndex = 69;
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button2
             // 
@@ -1091,71 +579,583 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // button15
+            // groupBox4
             // 
-            this.button15.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.Location = new System.Drawing.Point(55, 38);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(20, 20);
-            this.button15.TabIndex = 54;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.button43);
+            this.groupBox4.Controls.Add(this.button42);
+            this.groupBox4.Controls.Add(this.textBox22);
+            this.groupBox4.Controls.Add(this.button29);
+            this.groupBox4.Controls.Add(this.button28);
+            this.groupBox4.Location = new System.Drawing.Point(355, 203);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(108, 74);
+            this.groupBox4.TabIndex = 89;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Yazı ile";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // button14
+            // button43
             // 
-            this.button14.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button14.Location = new System.Drawing.Point(75, 38);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(20, 20);
-            this.button14.TabIndex = 55;
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button43.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button43.Location = new System.Drawing.Point(29, 15);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(20, 21);
+            this.button43.TabIndex = 82;
+            this.button43.UseVisualStyleBackColor = true;
+            this.button43.Click += new System.EventHandler(this.button43_Click);
             // 
-            // button31
+            // button42
             // 
-            this.button31.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button31.Location = new System.Drawing.Point(26, 13);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(20, 21);
-            this.button31.TabIndex = 70;
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.button31_Click);
+            this.button42.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button42.Location = new System.Drawing.Point(9, 15);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(20, 21);
+            this.button42.TabIndex = 83;
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
-            // button30
+            // button29
             // 
-            this.button30.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button30.Location = new System.Drawing.Point(6, 13);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(20, 21);
-            this.button30.TabIndex = 71;
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
+            this.button29.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button29.Location = new System.Drawing.Point(54, 42);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(20, 20);
+            this.button29.TabIndex = 68;
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
-            // button44
+            // button28
             // 
-            this.button44.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
-            this.button44.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button44.Location = new System.Drawing.Point(53, 27);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(20, 20);
-            this.button44.TabIndex = 85;
-            this.button44.UseVisualStyleBackColor = true;
-            this.button44.Click += new System.EventHandler(this.button44_Click);
+            this.button28.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button28.Location = new System.Drawing.Point(74, 42);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(20, 20);
+            this.button28.TabIndex = 69;
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
-            // button45
+            // groupBox5
             // 
-            this.button45.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
-            this.button45.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button45.Location = new System.Drawing.Point(74, 27);
-            this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(20, 20);
-            this.button45.TabIndex = 84;
-            this.button45.UseVisualStyleBackColor = true;
-            this.button45.Click += new System.EventHandler(this.button45_Click);
+            this.groupBox5.Controls.Add(this.textBox7);
+            this.groupBox5.Controls.Add(this.button39);
+            this.groupBox5.Controls.Add(this.button38);
+            this.groupBox5.Controls.Add(this.textBox20);
+            this.groupBox5.Controls.Add(this.button25);
+            this.groupBox5.Controls.Add(this.button24);
+            this.groupBox5.Location = new System.Drawing.Point(135, 203);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(103, 74);
+            this.groupBox5.TabIndex = 90;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "KDV";
+            // 
+            // button39
+            // 
+            this.button39.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button39.Location = new System.Drawing.Point(29, 19);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(20, 21);
+            this.button39.TabIndex = 78;
+            this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
+            // 
+            // button38
+            // 
+            this.button38.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button38.Location = new System.Drawing.Point(9, 19);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(20, 21);
+            this.button38.TabIndex = 79;
+            this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
+            // 
+            // button25
+            // 
+            this.button25.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button25.Location = new System.Drawing.Point(55, 44);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(20, 20);
+            this.button25.TabIndex = 64;
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
+            // 
+            // button24
+            // 
+            this.button24.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button24.Location = new System.Drawing.Point(75, 44);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(20, 20);
+            this.button24.TabIndex = 65;
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.textBox8);
+            this.groupBox6.Controls.Add(this.button41);
+            this.groupBox6.Controls.Add(this.button40);
+            this.groupBox6.Controls.Add(this.textBox21);
+            this.groupBox6.Controls.Add(this.button27);
+            this.groupBox6.Controls.Add(this.button26);
+            this.groupBox6.Location = new System.Drawing.Point(246, 203);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(103, 74);
+            this.groupBox6.TabIndex = 91;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Toplam";
+            // 
+            // button41
+            // 
+            this.button41.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button41.Location = new System.Drawing.Point(29, 19);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(20, 21);
+            this.button41.TabIndex = 80;
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
+            // 
+            // button40
+            // 
+            this.button40.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button40.Location = new System.Drawing.Point(9, 19);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(20, 21);
+            this.button40.TabIndex = 81;
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
+            // 
+            // button27
+            // 
+            this.button27.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button27.Location = new System.Drawing.Point(55, 45);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(20, 20);
+            this.button27.TabIndex = 66;
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // button26
+            // 
+            this.button26.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button26.Location = new System.Drawing.Point(75, 45);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(20, 20);
+            this.button26.TabIndex = 67;
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.textBox4);
+            this.groupBox7.Controls.Add(this.button32);
+            this.groupBox7.Controls.Add(this.button33);
+            this.groupBox7.Controls.Add(this.button19);
+            this.groupBox7.Controls.Add(this.textBox16);
+            this.groupBox7.Controls.Add(this.textBox17);
+            this.groupBox7.Controls.Add(this.label11);
+            this.groupBox7.Controls.Add(this.label12);
+            this.groupBox7.Controls.Add(this.button17);
+            this.groupBox7.Controls.Add(this.button16);
+            this.groupBox7.Controls.Add(this.button18);
+            this.groupBox7.Location = new System.Drawing.Point(333, 28);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(142, 77);
+            this.groupBox7.TabIndex = 92;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Vergi Dairesi No";
+            // 
+            // button32
+            // 
+            this.button32.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button32.Location = new System.Drawing.Point(8, 14);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(20, 21);
+            this.button32.TabIndex = 73;
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
+            // 
+            // button33
+            // 
+            this.button33.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button33.Location = new System.Drawing.Point(28, 14);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(20, 21);
+            this.button33.TabIndex = 72;
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
+            // 
+            // button19
+            // 
+            this.button19.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button19.Location = new System.Drawing.Point(99, 55);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(20, 20);
+            this.button19.TabIndex = 58;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button17
+            // 
+            this.button17.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button17.Location = new System.Drawing.Point(99, 35);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(20, 20);
+            this.button17.TabIndex = 56;
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button16
+            // 
+            this.button16.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button16.Location = new System.Drawing.Point(119, 35);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(20, 20);
+            this.button16.TabIndex = 57;
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button18
+            // 
+            this.button18.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button18.Location = new System.Drawing.Point(119, 55);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(20, 20);
+            this.button18.TabIndex = 59;
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.textBox18);
+            this.groupBox8.Controls.Add(this.button21);
+            this.groupBox8.Controls.Add(this.button20);
+            this.groupBox8.Controls.Add(this.textBox5);
+            this.groupBox8.Controls.Add(this.button35);
+            this.groupBox8.Controls.Add(this.button34);
+            this.groupBox8.Location = new System.Drawing.Point(119, 31);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(101, 67);
+            this.groupBox8.TabIndex = 93;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Tarih";
+            // 
+            // button21
+            // 
+            this.button21.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button21.Location = new System.Drawing.Point(55, 39);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(20, 20);
+            this.button21.TabIndex = 60;
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button20
+            // 
+            this.button20.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button20.Location = new System.Drawing.Point(75, 39);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(20, 20);
+            this.button20.TabIndex = 61;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button35
+            // 
+            this.button35.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button35.Location = new System.Drawing.Point(26, 13);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(20, 21);
+            this.button35.TabIndex = 74;
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
+            // 
+            // button34
+            // 
+            this.button34.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button34.Location = new System.Drawing.Point(6, 13);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(20, 21);
+            this.button34.TabIndex = 75;
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.textBox19);
+            this.groupBox9.Controls.Add(this.button23);
+            this.groupBox9.Controls.Add(this.button22);
+            this.groupBox9.Controls.Add(this.textBox6);
+            this.groupBox9.Controls.Add(this.button37);
+            this.groupBox9.Controls.Add(this.button36);
+            this.groupBox9.Location = new System.Drawing.Point(22, 203);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(103, 74);
+            this.groupBox9.TabIndex = 94;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Yekun";
+            // 
+            // button23
+            // 
+            this.button23.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button23.Location = new System.Drawing.Point(55, 46);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(20, 20);
+            this.button23.TabIndex = 62;
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button22
+            // 
+            this.button22.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button22.Location = new System.Drawing.Point(75, 46);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(20, 20);
+            this.button22.TabIndex = 63;
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button37
+            // 
+            this.button37.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button37.Location = new System.Drawing.Point(26, 19);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(20, 21);
+            this.button37.TabIndex = 76;
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
+            // 
+            // button36
+            // 
+            this.button36.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button36.Location = new System.Drawing.Point(6, 19);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(20, 21);
+            this.button36.TabIndex = 77;
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.checkBox1);
+            this.groupBox10.Controls.Add(this.label2);
+            this.groupBox10.Controls.Add(this.label1);
+            this.groupBox10.Controls.Add(this.textBox23);
+            this.groupBox10.Controls.Add(this.textBox12);
+            this.groupBox10.Location = new System.Drawing.Point(67, 284);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(382, 51);
+            this.groupBox10.TabIndex = 95;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Kağıt Boyutu";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(293, 20);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(73, 17);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Özel Form";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(154, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "En";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Boy";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(180, 19);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 20);
+            this.textBox23.TabIndex = 1;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(42, 19);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 20);
+            this.textBox12.TabIndex = 0;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.button1);
+            this.groupBox11.Controls.Add(this.button8);
+            this.groupBox11.Controls.Add(this.button9);
+            this.groupBox11.Controls.Add(this.button46);
+            this.groupBox11.Location = new System.Drawing.Point(67, 341);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(382, 54);
+            this.groupBox11.TabIndex = 96;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Kenar Boşluklarını Düzelt";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_left_01_186410;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(191, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 20);
+            this.button1.TabIndex = 72;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_right_01_186409;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Location = new System.Drawing.Point(211, 20);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(20, 20);
+            this.button8.TabIndex = 73;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_down_01_186411;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.Location = new System.Drawing.Point(165, 19);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(20, 21);
+            this.button9.TabIndex = 74;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button46
+            // 
+            this.button46.BackgroundImage = global::Fatura.Properties.Resources.iconfinder_arrow_up_01_186407;
+            this.button46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button46.Location = new System.Drawing.Point(143, 19);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(20, 21);
+            this.button46.TabIndex = 75;
+            this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.button46_Click);
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.richTextBox1);
+            this.groupBox12.Controls.Add(this.label3);
+            this.groupBox12.Controls.Add(this.button48);
+            this.groupBox12.Controls.Add(this.button47);
+            this.groupBox12.Controls.Add(this.pictureBox1);
+            this.groupBox12.Location = new System.Drawing.Point(67, 401);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(385, 127);
+            this.groupBox12.TabIndex = 97;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Örnek Fatura";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Location = new System.Drawing.Point(110, 77);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(269, 44);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "Bu alan Fatura ön izleme ile kolonları daha basit yerleştirmek için açılmıştır. F" +
+    "atura kolon ayarını yaptıktan sonra lütfen resimi siliniz.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(107, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 3;
+            // 
+            // button48
+            // 
+            this.button48.Location = new System.Drawing.Point(107, 48);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(75, 23);
+            this.button48.TabIndex = 2;
+            this.button48.Text = "Dosyayı Sil";
+            this.button48.UseVisualStyleBackColor = true;
+            this.button48.Click += new System.EventHandler(this.button48_Click);
+            // 
+            // button47
+            // 
+            this.button47.Location = new System.Drawing.Point(107, 19);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(75, 23);
+            this.button47.TabIndex = 1;
+            this.button47.Text = "Dosya Seç";
+            this.button47.UseVisualStyleBackColor = true;
+            this.button47.Click += new System.EventHandler(this.button47_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Fatura.Properties.Resources._1006px_PictureBox_logo_svg;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(94, 102);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Kayıt,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(487, 25);
+            this.toolStrip1.TabIndex = 98;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // Kayıt
+            // 
+            this.Kayıt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Kayıt.Image = global::Fatura.Properties.Resources.floppy_save_icon__23;
+            this.Kayıt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Kayıt.Name = "Kayıt";
+            this.Kayıt.Size = new System.Drawing.Size(23, 22);
+            this.Kayıt.Text = "Kaydet";
+            this.Kayıt.Click += new System.EventHandler(this.Kayıt_Click);
             // 
             // toolStripLabel1
             // 
@@ -1213,9 +1213,9 @@
             this.groupBox11.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

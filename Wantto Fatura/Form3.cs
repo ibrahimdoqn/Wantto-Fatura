@@ -82,7 +82,7 @@ namespace Wantto_Fatura
         }
         
 
-        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        public void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             string customForm = "0";
             if (checkBox1.Checked)

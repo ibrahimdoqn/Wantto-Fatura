@@ -121,23 +121,20 @@
   <data name="windows-log-off-png-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\windows-log-off-png-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="papers.co-sa08-blue-sky-blue-blur-40-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\papers.co-sa08-blue-sky-blue-blur-40-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="18462" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\18462.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="full_recycle_bin-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\full_recycle_bin-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0_-_pDURXwwMkQryqt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0_-_pDURXwwMkQryqt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Print-2-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Print-2-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconfinder_arrow-left-01_186410" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_arrow-left-01_186410.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="588a64f5d06f6719692a2d131" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\588a64f5d06f6719692a2d131.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yukarı" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yukarı.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +145,20 @@
   <data name="588a64f5d06f6719692a2d13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\588a64f5d06f6719692a2d13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_arrow-up-01_186407" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_arrow-up-01_186407.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="588a64f5d06f6719692a2d131" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\588a64f5d06f6719692a2d131.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ScreamingEagles-Sign-Form-Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ScreamingEagles-Sign-Form-Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="0_-_pDURXwwMkQryqt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0_-_pDURXwwMkQryqt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="papers.co-sa08-blue-sky-blue-blur-40-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\papers.co-sa08-blue-sky-blue-blur-40-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_arrow-down-01_186411" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_arrow-down-01_186411.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,13 +181,16 @@
   <data name="preview_97247" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\preview_97247.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_arrow-up-01_186407" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_arrow-up-01_186407.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_arrow-right-01_186409" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_arrow-right-01_186409.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_arrow-down-01_186411" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_arrow-down-01_186411.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Funny Only Hd Wallpaper Fu 744x1392PX Wallpaper My Iphone Is Blurry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Funny Only Hd Wallpaper Fu 744x1392PX Wallpaper My Iphone Is Blurry.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="floppy-save-icon--23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\floppy-save-icon--23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

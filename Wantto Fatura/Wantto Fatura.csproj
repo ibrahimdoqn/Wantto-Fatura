@@ -186,6 +186,8 @@
     <None Include="Resources\papers.co-sa08-blue-sky-blue-blur-40-wallpaper.jpg" />
     <None Include="Resources\wallpaper-blue-blue-sky-blur-750x1334.jpg" />
     <None Include="Resources\Funny Only Hd Wallpaper Fu 744x1392PX Wallpaper My Iphone Is Blurry.jpg" />
+    <None Include="Resources\full_recycle_bin-512.png" />
+    <None Include="Resources\floppy-save-icon--23.png" />
     <Content Include="Text Document.ico" />
   </ItemGroup>
   <ItemGroup />

@@ -31,6 +31,33 @@ namespace Wantto_Fatura
             InitializeComponent();
         }
 
+        //TabControl Nesneleri ayarlama
+        private void tabControlAyar()
+        {
+            if (tabControl1.SelectedIndex != 0)
+            {
+                yazdırToolStripMenuItem.Visible = false;
+                yazdırToolStripMenuItem2.Visible = false;
+                kayıtToolStripMenuItem.Visible = false;
+                temizleToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                kayıtToolStripMenuItem.Visible = true;
+                temizleToolStripMenuItem.Visible = true;
+                if (File.Exists("IMG.jpg"))
+                {
+                    yazdırToolStripMenuItem.Visible = true;
+                    yazdırToolStripMenuItem2.Visible = false;
+                }
+                else
+                {
+                    yazdırToolStripMenuItem.Visible = false;
+                    yazdırToolStripMenuItem2.Visible = true;
+                }
+            }
+        }
+
         //Kağıt Boyutu ayarlama
         public static System.Drawing.Printing.PaperSize CalculatePaperSize(double WidthInCentimeters, double HeightInCentimetres)
         {
@@ -419,6 +446,16 @@ namespace Wantto_Fatura
             }
             dr.Close();
             label17.Text = st1 + "  " + st2 + "  " + st3;
+            dataGridView1.Columns[0].Width = 100;
+            dataGridView1.Columns[1].Width = 80;
+            dataGridView1.Columns[2].Width = 143;
+            dataGridView1.Columns[3].Width = 100;
+
+
+            dataGridView1.Columns[0].HeaderText = "Fatura No";
+            dataGridView1.Columns[2].HeaderText = "Firma";
+            dataGridView1.Columns[3].HeaderText = "Tutarı";
+            dataGridView1.Columns[4].HeaderText = "Ödendi";
         }
 
         private void musteri()
@@ -442,6 +479,18 @@ namespace Wantto_Fatura
             dt = new DataTable();
             da.Fill(dt);
             dataGridView2.DataSource = dt;
+
+            dataGridView2.Columns[0].Width = 105;
+            dataGridView2.Columns[1].Width = 105;
+            dataGridView2.Columns[2].Width = 105;
+            dataGridView2.Columns[3].Width = 104;
+            dataGridView2.Columns[4].Width = 104;
+            dataGridView2.Columns[0].HeaderText = "Firma";
+            dataGridView2.Columns[1].HeaderText = "";
+            dataGridView2.Columns[2].HeaderText = "";
+            dataGridView2.Columns[3].HeaderText = "Vergi Dairesi";
+            dataGridView2.Columns[4].HeaderText = "Vergi No";
+            
         }
         private void textDelete()
         {
@@ -1414,6 +1463,7 @@ namespace Wantto_Fatura
             }
             dataReader();
             musteri();
+            tabControlAyar();
         }
 
         private void comboKDV1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1491,7 +1541,7 @@ namespace Wantto_Fatura
 
         private void yazdırToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void temizleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1701,8 +1751,17 @@ namespace Wantto_Fatura
 
         private void formAyarlarıToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 frm = new Form3();
-            frm.Show();
+            Form3 testDialog = new Form3();
+            // Show testDialog as a modal dialog and determine if DialogResult = OK.
+            if (testDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                tabControlAyar();
+            }
+            else
+            {
+                tabControlAyar();
+            }
+            testDialog.Dispose();
         }
 
         private void hakkındaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1737,5 +1796,20 @@ namespace Wantto_Fatura
             fyazdir();
         }
 
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            dataReader1();
+        }
+
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tabControlAyar();
+        }
+
+        private void yazdırToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            yazdir();
+        }
     }
 }

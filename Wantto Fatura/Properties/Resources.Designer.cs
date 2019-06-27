@@ -133,6 +133,26 @@ namespace Fatura.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap floppy_save_icon__23 {
+            get {
+                object obj = ResourceManager.GetObject("floppy-save-icon--23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_recycle_bin_512 {
+            get {
+                object obj = ResourceManager.GetObject("full_recycle_bin-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Funny_Only_Hd_Wallpaper_Fu_744x1392PX_Wallpaper_My_Iphone_Is_Blurry {
             get {
                 object obj = ResourceManager.GetObject("Funny Only Hd Wallpaper Fu 744x1392PX Wallpaper My Iphone Is Blurry", resourceCulture);
