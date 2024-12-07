@@ -12,5 +12,3 @@ Faturaları Firma, Tarih, Ödeme, Seri No'ya göre filtreleme<br>
 Filtrelenmiş faturaların KDV ARATOPLAM VE TOPLAM Tutarını hesaplama<br>
 MM cinsinden ayarlanılabilen Fatura Formu<br>
 <img src="https://github.com/ibrahimdoqn/Wantto-Fatura/blob/master/SharedScreenshot2.jpg?raw=true"><br>
-
-Firmaya özel Stok Cari ve Fatura yazılımları tasarlanır. İbrahim DOĞAN 0531 592 8424
